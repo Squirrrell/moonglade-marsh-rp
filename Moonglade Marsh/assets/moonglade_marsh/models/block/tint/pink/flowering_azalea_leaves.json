@@ -1,0 +1,52 @@
+{
+  "textures": {
+    "particle": "moonglade_marsh:block/tint/pink/flowering_azalea_leaves",
+    "down": "moonglade_marsh:block/tint/pink/flowering_azalea_leaves",
+    "up": "moonglade_marsh:block/tint/pink/flowering_azalea_leaves",
+    "north": "moonglade_marsh:block/tint/pink/flowering_azalea_leaves",
+    "east": "moonglade_marsh:block/tint/pink/flowering_azalea_leaves",
+    "south": "moonglade_marsh:block/tint/pink/flowering_azalea_leaves",
+    "west": "moonglade_marsh:block/tint/pink/flowering_azalea_leaves",
+    "all": "moonglade_marsh:block/tint/pink/flowering_azalea_leaves"
+  },
+  "elements": [
+    {
+      "from": [
+        0,
+        0,
+        0
+      ],
+      "to": [
+        16,
+        16,
+        16
+      ],
+      "faces": {
+        "down": {
+          "texture": "#down",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "#up",
+          "cullface": "up"
+        },
+        "north": {
+          "texture": "#north",
+          "cullface": "north"
+        },
+        "south": {
+          "texture": "#south",
+          "cullface": "south"
+        },
+        "west": {
+          "texture": "#west",
+          "cullface": "west"
+        },
+        "east": {
+          "texture": "#east",
+          "cullface": "east"
+        }
+      }
+    }
+  ]
+}

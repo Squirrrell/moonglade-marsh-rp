@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "moonglade_marsh:block/tint/yellow/tall_grass_bottom"
+    },
+    "half=upper": {
+      "model": "moonglade_marsh:block/tint/yellow/tall_grass_top"
+    }
+  }
+}

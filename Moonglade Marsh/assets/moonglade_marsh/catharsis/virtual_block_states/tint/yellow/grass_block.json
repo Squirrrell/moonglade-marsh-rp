@@ -1,0 +1,24 @@
+{
+  "variants": {
+    "snowy=false": [
+      {
+        "model": "moonglade_marsh:block/tint/yellow/grass_block"
+      },
+      {
+        "model": "moonglade_marsh:block/tint/yellow/grass_block",
+        "y": 90
+      },
+      {
+        "model": "moonglade_marsh:block/tint/yellow/grass_block",
+        "y": 180
+      },
+      {
+        "model": "moonglade_marsh:block/tint/yellow/grass_block",
+        "y": 270
+      }
+    ],
+    "snowy=true": {
+      "model": "minecraft:block/grass_block_snow"
+    }
+  }
+}

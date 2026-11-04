@@ -1,0 +1,16 @@
+# build output
+*.zip
+
+# third-party mods / packs
+*.jar
+
+# python
+__pycache__/
+*.pyc
+
+# OS / editor
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/
+.idea/

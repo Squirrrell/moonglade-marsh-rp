@@ -1,0 +1,16 @@
+{
+  "type": "conditional",
+  "condition": {
+    "type": "in_island",
+    "island": "foraging_2"
+  },
+  "definition": {
+    "type": "per_area",
+    "entries": {
+      "moonglade_marsh:mangrove_trees": {
+        "type": "redirect",
+        "virtual_state": "moonglade_marsh:vanilla/stripped_birch_log"
+      }
+    }
+  }
+}

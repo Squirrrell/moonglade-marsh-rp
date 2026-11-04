@@ -1,0 +1,1886 @@
+{
+  "pack": {
+    "description": "§7Recolors Moonglade Marsh.\n§4Requires: Catharsis",
+    "min_format": [
+      84,
+      0
+    ],
+    "max_format": [
+      2147483647,
+      0
+    ]
+  },
+  "catharsis:pack/v1": {
+    "id": "moonglade_marsh",
+    "version": "1.0.0",
+    "dependencies": {
+      "catharsis": ">=1.0.0-beta.22"
+    },
+    "config": [
+      {
+        "type": "tab",
+        "title": {
+          "text": "Customizable Options",
+          "color": "gold",
+          "bold": true
+        },
+        "options": [
+          {
+            "type": "separator",
+            "title": {
+              "text": "Fig Trees",
+              "color": "gold",
+              "bold": true
+            }
+          },
+          {
+            "type": "dropdown",
+            "id": "fig_wood_type",
+            "title": "Wood Type",
+            "description": {
+              "text": "",
+              "extra": [
+                {
+                  "text": "Changes the log, wood, stripped log and stripped wood blocks used by these trees. Only affects blocks inside the tree areas.",
+                  "color": "gray",
+                  "italic": true
+                }
+              ]
+            },
+            "options": [
+              {
+                "value": "oak",
+                "text": {
+                  "text": "Oak",
+                  "color": "gold"
+                }
+              },
+              {
+                "value": "birch",
+                "text": {
+                  "text": "Birch",
+                  "color": "white"
+                }
+              },
+              {
+                "value": "spruce",
+                "text": {
+                  "text": "Spruce",
+                  "color": "dark_red"
+                },
+                "default": true
+              },
+              {
+                "value": "dark_oak",
+                "text": {
+                  "text": "Dark Oak",
+                  "color": "dark_gray"
+                }
+              },
+              {
+                "value": "jungle",
+                "text": {
+                  "text": "Jungle",
+                  "color": "yellow"
+                }
+              },
+              {
+                "value": "acacia",
+                "text": {
+                  "text": "Acacia",
+                  "color": "gold"
+                }
+              },
+              {
+                "value": "mangrove",
+                "text": {
+                  "text": "Mangrove",
+                  "color": "dark_red"
+                }
+              },
+              {
+                "value": "warped",
+                "text": {
+                  "text": "Warped",
+                  "color": "dark_aqua"
+                }
+              },
+              {
+                "value": "crimson",
+                "text": {
+                  "text": "Crimson",
+                  "color": "red"
+                }
+              },
+              {
+                "value": "pale_oak",
+                "text": {
+                  "text": "Pale Oak",
+                  "color": "gray"
+                }
+              },
+              {
+                "value": "cherry",
+                "text": {
+                  "text": "Cherry",
+                  "color": "light_purple"
+                }
+              }
+            ]
+          },
+          {
+            "type": "dropdown",
+            "id": "fig_leaf_color",
+            "title": "Leaf Color",
+            "description": {
+              "text": "",
+              "extra": [
+                {
+                  "text": "Recolors the canopy of every fig tree.",
+                  "color": "gray",
+                  "italic": true
+                }
+              ]
+            },
+            "options": [
+              {
+                "value": "default",
+                "text": {
+                  "text": "Default",
+                  "color": "gray"
+                },
+                "default": true
+              },
+              {
+                "value": "red",
+                "text": {
+                  "text": "Red",
+                  "color": "red"
+                }
+              },
+              {
+                "value": "orange",
+                "text": {
+                  "text": "Orange",
+                  "color": "gold"
+                }
+              },
+              {
+                "value": "yellow",
+                "text": {
+                  "text": "Yellow",
+                  "color": "yellow"
+                }
+              },
+              {
+                "value": "lime",
+                "text": {
+                  "text": "Lime",
+                  "color": "green"
+                }
+              },
+              {
+                "value": "green",
+                "text": {
+                  "text": "Green",
+                  "color": "dark_green"
+                }
+              },
+              {
+                "value": "teal",
+                "text": {
+                  "text": "Swamp Teal",
+                  "color": "dark_aqua"
+                }
+              },
+              {
+                "value": "light_blue",
+                "text": {
+                  "text": "Light Blue",
+                  "color": "aqua"
+                }
+              },
+              {
+                "value": "blue",
+                "text": {
+                  "text": "Blue",
+                  "color": "blue"
+                }
+              },
+              {
+                "value": "pink",
+                "text": {
+                  "text": "Pink",
+                  "color": "light_purple"
+                }
+              },
+              {
+                "value": "purple",
+                "text": {
+                  "text": "Purple",
+                  "color": "dark_purple"
+                }
+              },
+              {
+                "value": "white",
+                "text": {
+                  "text": "White",
+                  "color": "white"
+                }
+              },
+              {
+                "value": "grey",
+                "text": {
+                  "text": "Grey",
+                  "color": "gray"
+                }
+              },
+              {
+                "value": "black",
+                "text": {
+                  "text": "Black",
+                  "color": "dark_gray"
+                }
+              }
+            ]
+          },
+          {
+            "type": "separator",
+            "title": {
+              "text": "Mangrove Trees",
+              "color": "dark_red",
+              "bold": true
+            }
+          },
+          {
+            "type": "dropdown",
+            "id": "mangrove_wood_type",
+            "title": "Wood Type",
+            "description": {
+              "text": "",
+              "extra": [
+                {
+                  "text": "Changes the log, wood, stripped log and stripped wood blocks used by these trees. Only affects blocks inside the tree areas.",
+                  "color": "gray",
+                  "italic": true
+                }
+              ]
+            },
+            "options": [
+              {
+                "value": "oak",
+                "text": {
+                  "text": "Oak",
+                  "color": "gold"
+                }
+              },
+              {
+                "value": "birch",
+                "text": {
+                  "text": "Birch",
+                  "color": "white"
+                }
+              },
+              {
+                "value": "spruce",
+                "text": {
+                  "text": "Spruce",
+                  "color": "dark_red"
+                }
+              },
+              {
+                "value": "dark_oak",
+                "text": {
+                  "text": "Dark Oak",
+                  "color": "dark_gray"
+                }
+              },
+              {
+                "value": "jungle",
+                "text": {
+                  "text": "Jungle",
+                  "color": "yellow"
+                }
+              },
+              {
+                "value": "acacia",
+                "text": {
+                  "text": "Acacia",
+                  "color": "gold"
+                }
+              },
+              {
+                "value": "mangrove",
+                "text": {
+                  "text": "Mangrove",
+                  "color": "dark_red"
+                },
+                "default": true
+              },
+              {
+                "value": "warped",
+                "text": {
+                  "text": "Warped",
+                  "color": "dark_aqua"
+                }
+              },
+              {
+                "value": "crimson",
+                "text": {
+                  "text": "Crimson",
+                  "color": "red"
+                }
+              },
+              {
+                "value": "pale_oak",
+                "text": {
+                  "text": "Pale Oak",
+                  "color": "gray"
+                }
+              },
+              {
+                "value": "cherry",
+                "text": {
+                  "text": "Cherry",
+                  "color": "light_purple"
+                }
+              }
+            ]
+          },
+          {
+            "type": "dropdown",
+            "id": "mangrove_leaf_color",
+            "title": "Leaf Color",
+            "description": {
+              "text": "",
+              "extra": [
+                {
+                  "text": "Recolors the canopy of every mangrove tree.",
+                  "color": "gray",
+                  "italic": true
+                }
+              ]
+            },
+            "options": [
+              {
+                "value": "default",
+                "text": {
+                  "text": "Default",
+                  "color": "gray"
+                },
+                "default": true
+              },
+              {
+                "value": "red",
+                "text": {
+                  "text": "Red",
+                  "color": "red"
+                }
+              },
+              {
+                "value": "orange",
+                "text": {
+                  "text": "Orange",
+                  "color": "gold"
+                }
+              },
+              {
+                "value": "yellow",
+                "text": {
+                  "text": "Yellow",
+                  "color": "yellow"
+                }
+              },
+              {
+                "value": "lime",
+                "text": {
+                  "text": "Lime",
+                  "color": "green"
+                }
+              },
+              {
+                "value": "green",
+                "text": {
+                  "text": "Green",
+                  "color": "dark_green"
+                }
+              },
+              {
+                "value": "teal",
+                "text": {
+                  "text": "Swamp Teal",
+                  "color": "dark_aqua"
+                }
+              },
+              {
+                "value": "light_blue",
+                "text": {
+                  "text": "Light Blue",
+                  "color": "aqua"
+                }
+              },
+              {
+                "value": "blue",
+                "text": {
+                  "text": "Blue",
+                  "color": "blue"
+                }
+              },
+              {
+                "value": "pink",
+                "text": {
+                  "text": "Pink",
+                  "color": "light_purple"
+                }
+              },
+              {
+                "value": "purple",
+                "text": {
+                  "text": "Purple",
+                  "color": "dark_purple"
+                }
+              },
+              {
+                "value": "white",
+                "text": {
+                  "text": "White",
+                  "color": "white"
+                }
+              },
+              {
+                "value": "grey",
+                "text": {
+                  "text": "Grey",
+                  "color": "gray"
+                }
+              },
+              {
+                "value": "black",
+                "text": {
+                  "text": "Black",
+                  "color": "dark_gray"
+                }
+              }
+            ]
+          },
+          {
+            "type": "separator",
+            "title": {
+              "text": "Grass Color",
+              "color": "dark_green",
+              "bold": true
+            }
+          },
+          {
+            "type": "dropdown",
+            "id": "grass_color",
+            "title": "Grass Color",
+            "description": {
+              "text": "",
+              "extra": [
+                {
+                  "text": "Recolors grass blocks, grass, ferns, vines and lily pads across Moonglade Marsh.",
+                  "color": "gray",
+                  "italic": true
+                }
+              ]
+            },
+            "options": [
+              {
+                "value": "default",
+                "text": {
+                  "text": "Default",
+                  "color": "gray"
+                },
+                "default": true
+              },
+              {
+                "value": "red",
+                "text": {
+                  "text": "Red",
+                  "color": "red"
+                }
+              },
+              {
+                "value": "orange",
+                "text": {
+                  "text": "Orange",
+                  "color": "gold"
+                }
+              },
+              {
+                "value": "yellow",
+                "text": {
+                  "text": "Yellow",
+                  "color": "yellow"
+                }
+              },
+              {
+                "value": "lime",
+                "text": {
+                  "text": "Lime",
+                  "color": "green"
+                }
+              },
+              {
+                "value": "green",
+                "text": {
+                  "text": "Green",
+                  "color": "dark_green"
+                }
+              },
+              {
+                "value": "teal",
+                "text": {
+                  "text": "Swamp Teal",
+                  "color": "dark_aqua"
+                }
+              },
+              {
+                "value": "light_blue",
+                "text": {
+                  "text": "Light Blue",
+                  "color": "aqua"
+                }
+              },
+              {
+                "value": "blue",
+                "text": {
+                  "text": "Blue",
+                  "color": "blue"
+                }
+              },
+              {
+                "value": "pink",
+                "text": {
+                  "text": "Pink",
+                  "color": "light_purple"
+                }
+              },
+              {
+                "value": "purple",
+                "text": {
+                  "text": "Purple",
+                  "color": "dark_purple"
+                }
+              },
+              {
+                "value": "white",
+                "text": {
+                  "text": "White",
+                  "color": "white"
+                }
+              },
+              {
+                "value": "grey",
+                "text": {
+                  "text": "Grey",
+                  "color": "gray"
+                }
+              },
+              {
+                "value": "black",
+                "text": {
+                  "text": "Black",
+                  "color": "dark_gray"
+                }
+              }
+            ]
+          },
+          {
+            "type": "separator",
+            "title": {
+              "text": "Marsh Clutter",
+              "color": "dark_aqua",
+              "bold": true
+            }
+          },
+          {
+            "type": "boolean",
+            "id": "hide_foliage",
+            "title": "Hide Grass & Ferns",
+            "description": {
+              "text": "",
+              "extra": [
+                {
+                  "text": "Hides short grass, tall grass, ferns and large ferns so logs are easier to see.",
+                  "color": "gray",
+                  "italic": true
+                }
+              ]
+            },
+            "default": false
+          },
+          {
+            "type": "boolean",
+            "id": "hide_lily_pads",
+            "title": "Hide Lily Pads",
+            "description": {
+              "text": "",
+              "extra": [
+                {
+                  "text": "Makes lily pads invisible. Their hitbox still exists.",
+                  "color": "gray",
+                  "italic": true
+                }
+              ]
+            },
+            "default": false
+          },
+          {
+            "type": "separator",
+            "title": {
+              "text": "Ground",
+              "color": "gray",
+              "bold": true
+            }
+          },
+          {
+            "type": "dropdown",
+            "id": "mud_type",
+            "title": "Mud Texture",
+            "description": {
+              "text": "",
+              "extra": [
+                {
+                  "text": "Replaces mud blocks on the island.",
+                  "color": "gray",
+                  "italic": true
+                }
+              ]
+            },
+            "options": [
+              {
+                "value": "mud",
+                "text": {
+                  "text": "Mud",
+                  "color": "dark_gray"
+                },
+                "default": true
+              },
+              {
+                "value": "packed_mud",
+                "text": {
+                  "text": "Packed Mud",
+                  "color": "gold"
+                }
+              },
+              {
+                "value": "mud_bricks",
+                "text": {
+                  "text": "Mud Bricks",
+                  "color": "gold"
+                }
+              },
+              {
+                "value": "dirt",
+                "text": {
+                  "text": "Dirt",
+                  "color": "gold"
+                }
+              },
+              {
+                "value": "coarse_dirt",
+                "text": {
+                  "text": "Coarse Dirt",
+                  "color": "gold"
+                }
+              },
+              {
+                "value": "moss_block",
+                "text": {
+                  "text": "Moss",
+                  "color": "green"
+                }
+              },
+              {
+                "value": "rooted_dirt",
+                "text": {
+                  "text": "Rooted Dirt",
+                  "color": "gold"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "fabric:overlays": {
+    "entries": [
+      {
+        "directory": "fig_wood_as_oak",
+        "condition": {
+          "condition": "catharsis:config",
+          "pack": "moonglade_marsh",
+          "id": "fig_wood_type",
+          "value": "oak"
+        }
+      },
+      {
+        "directory": "fig_wood_as_birch",
+        "condition": {
+          "condition": "catharsis:config",
+          "pack": "moonglade_marsh",
+          "id": "fig_wood_type",
+          "value": "birch"
+        }
+      },
+      {
+        "directory": "fig_wood_as_dark_oak",
+        "condition": {
+          "condition": "catharsis:config",
+          "pack": "moonglade_marsh",
+          "id": "fig_wood_type",
+          "value": "dark_oak"
+        }
+      },
+      {
+        "directory": "fig_wood_as_jungle",
+        "condition": {
+          "condition": "catharsis:config",
+          "pack": "moonglade_marsh",
+          "id": "fig_wood_type",
+          "value": "jungle"
+        }
+      },
+      {
+        "directory": "fig_wood_as_acacia",
+        "condition": {
+          "condition": "catharsis:config",
+          "pack": "moonglade_marsh",
+          "id": "fig_wood_type",
+          "value": "acacia"
+        }
+      },
+      {
+        "directory": "fig_wood_as_mangrove",
+        "condition": {
+          "condition": "catharsis:config",
+          "pack": "moonglade_marsh",
+          "id": "fig_wood_type",
+          "value": "mangrove"
+        }
+      },
+      {
+        "directory": "fig_wood_as_warped",
+        "condition": {
+          "condition": "catharsis:config",
+          "pack": "moonglade_marsh",
+          "id": "fig_wood_type",
+          "value": "warped"
+        }
+      },
+      {
+        "directory": "fig_wood_as_crimson",
+        "condition": {
+          "condition": "catharsis:config",
+          "pack": "moonglade_marsh",
+          "id": "fig_wood_type",
+          "value": "crimson"
+        }
+      },
+      {
+        "directory": "fig_wood_as_pale_oak",
+        "condition": {
+          "condition": "catharsis:config",
+          "pack": "moonglade_marsh",
+          "id": "fig_wood_type",
+          "value": "pale_oak"
+        }
+      },
+      {
+        "directory": "fig_wood_as_cherry",
+        "condition": {
+          "condition": "catharsis:config",
+          "pack": "moonglade_marsh",
+          "id": "fig_wood_type",
+          "value": "cherry"
+        }
+      },
+      {
+        "directory": "mangrove_wood_as_oak",
+        "condition": {
+          "condition": "catharsis:config",
+          "pack": "moonglade_marsh",
+          "id": "mangrove_wood_type",
+          "value": "oak"
+        }
+      },
+      {
+        "directory": "mangrove_wood_as_birch",
+        "condition": {
+          "condition": "catharsis:config",
+          "pack": "moonglade_marsh",
+          "id": "mangrove_wood_type",
+          "value": "birch"
+        }
+      },
+      {
+        "directory": "mangrove_wood_as_spruce",
+        "condition": {
+          "condition": "catharsis:config",
+          "pack": "moonglade_marsh",
+          "id": "mangrove_wood_type",
+          "value": "spruce"
+        }
+      },
+      {
+        "directory": "mangrove_wood_as_dark_oak",
+        "condition": {
+          "condition": "catharsis:config",
+          "pack": "moonglade_marsh",
+          "id": "mangrove_wood_type",
+          "value": "dark_oak"
+        }
+      },
+      {
+        "directory": "mangrove_wood_as_jungle",
+        "condition": {
+          "condition": "catharsis:config",
+          "pack": "moonglade_marsh",
+          "id": "mangrove_wood_type",
+          "value": "jungle"
+        }
+      },
+      {
+        "directory": "mangrove_wood_as_acacia",
+        "condition": {
+          "condition": "catharsis:config",
+          "pack": "moonglade_marsh",
+          "id": "mangrove_wood_type",
+          "value": "acacia"
+        }
+      },
+      {
+        "directory": "mangrove_wood_as_warped",
+        "condition": {
+          "condition": "catharsis:config",
+          "pack": "moonglade_marsh",
+          "id": "mangrove_wood_type",
+          "value": "warped"
+        }
+      },
+      {
+        "directory": "mangrove_wood_as_crimson",
+        "condition": {
+          "condition": "catharsis:config",
+          "pack": "moonglade_marsh",
+          "id": "mangrove_wood_type",
+          "value": "crimson"
+        }
+      },
+      {
+        "directory": "mangrove_wood_as_pale_oak",
+        "condition": {
+          "condition": "catharsis:config",
+          "pack": "moonglade_marsh",
+          "id": "mangrove_wood_type",
+          "value": "pale_oak"
+        }
+      },
+      {
+        "directory": "mangrove_wood_as_cherry",
+        "condition": {
+          "condition": "catharsis:config",
+          "pack": "moonglade_marsh",
+          "id": "mangrove_wood_type",
+          "value": "cherry"
+        }
+      },
+      {
+        "directory": "fig_leaves_red",
+        "condition": {
+          "condition": "catharsis:config",
+          "pack": "moonglade_marsh",
+          "id": "fig_leaf_color",
+          "value": "red"
+        }
+      },
+      {
+        "directory": "fig_leaves_orange",
+        "condition": {
+          "condition": "catharsis:config",
+          "pack": "moonglade_marsh",
+          "id": "fig_leaf_color",
+          "value": "orange"
+        }
+      },
+      {
+        "directory": "fig_leaves_yellow",
+        "condition": {
+          "condition": "catharsis:config",
+          "pack": "moonglade_marsh",
+          "id": "fig_leaf_color",
+          "value": "yellow"
+        }
+      },
+      {
+        "directory": "fig_leaves_lime",
+        "condition": {
+          "condition": "catharsis:config",
+          "pack": "moonglade_marsh",
+          "id": "fig_leaf_color",
+          "value": "lime"
+        }
+      },
+      {
+        "directory": "fig_leaves_green",
+        "condition": {
+          "condition": "catharsis:config",
+          "pack": "moonglade_marsh",
+          "id": "fig_leaf_color",
+          "value": "green"
+        }
+      },
+      {
+        "directory": "fig_leaves_teal",
+        "condition": {
+          "condition": "catharsis:config",
+          "pack": "moonglade_marsh",
+          "id": "fig_leaf_color",
+          "value": "teal"
+        }
+      },
+      {
+        "directory": "fig_leaves_light_blue",
+        "condition": {
+          "condition": "catharsis:config",
+          "pack": "moonglade_marsh",
+          "id": "fig_leaf_color",
+          "value": "light_blue"
+        }
+      },
+      {
+        "directory": "fig_leaves_blue",
+        "condition": {
+          "condition": "catharsis:config",
+          "pack": "moonglade_marsh",
+          "id": "fig_leaf_color",
+          "value": "blue"
+        }
+      },
+      {
+        "directory": "fig_leaves_pink",
+        "condition": {
+          "condition": "catharsis:config",
+          "pack": "moonglade_marsh",
+          "id": "fig_leaf_color",
+          "value": "pink"
+        }
+      },
+      {
+        "directory": "fig_leaves_purple",
+        "condition": {
+          "condition": "catharsis:config",
+          "pack": "moonglade_marsh",
+          "id": "fig_leaf_color",
+          "value": "purple"
+        }
+      },
+      {
+        "directory": "fig_leaves_white",
+        "condition": {
+          "condition": "catharsis:config",
+          "pack": "moonglade_marsh",
+          "id": "fig_leaf_color",
+          "value": "white"
+        }
+      },
+      {
+        "directory": "fig_leaves_grey",
+        "condition": {
+          "condition": "catharsis:config",
+          "pack": "moonglade_marsh",
+          "id": "fig_leaf_color",
+          "value": "grey"
+        }
+      },
+      {
+        "directory": "fig_leaves_black",
+        "condition": {
+          "condition": "catharsis:config",
+          "pack": "moonglade_marsh",
+          "id": "fig_leaf_color",
+          "value": "black"
+        }
+      },
+      {
+        "directory": "mangrove_leaves_red",
+        "condition": {
+          "condition": "catharsis:config",
+          "pack": "moonglade_marsh",
+          "id": "mangrove_leaf_color",
+          "value": "red"
+        }
+      },
+      {
+        "directory": "mangrove_leaves_orange",
+        "condition": {
+          "condition": "catharsis:config",
+          "pack": "moonglade_marsh",
+          "id": "mangrove_leaf_color",
+          "value": "orange"
+        }
+      },
+      {
+        "directory": "mangrove_leaves_yellow",
+        "condition": {
+          "condition": "catharsis:config",
+          "pack": "moonglade_marsh",
+          "id": "mangrove_leaf_color",
+          "value": "yellow"
+        }
+      },
+      {
+        "directory": "mangrove_leaves_lime",
+        "condition": {
+          "condition": "catharsis:config",
+          "pack": "moonglade_marsh",
+          "id": "mangrove_leaf_color",
+          "value": "lime"
+        }
+      },
+      {
+        "directory": "mangrove_leaves_green",
+        "condition": {
+          "condition": "catharsis:config",
+          "pack": "moonglade_marsh",
+          "id": "mangrove_leaf_color",
+          "value": "green"
+        }
+      },
+      {
+        "directory": "mangrove_leaves_teal",
+        "condition": {
+          "condition": "catharsis:config",
+          "pack": "moonglade_marsh",
+          "id": "mangrove_leaf_color",
+          "value": "teal"
+        }
+      },
+      {
+        "directory": "mangrove_leaves_light_blue",
+        "condition": {
+          "condition": "catharsis:config",
+          "pack": "moonglade_marsh",
+          "id": "mangrove_leaf_color",
+          "value": "light_blue"
+        }
+      },
+      {
+        "directory": "mangrove_leaves_blue",
+        "condition": {
+          "condition": "catharsis:config",
+          "pack": "moonglade_marsh",
+          "id": "mangrove_leaf_color",
+          "value": "blue"
+        }
+      },
+      {
+        "directory": "mangrove_leaves_pink",
+        "condition": {
+          "condition": "catharsis:config",
+          "pack": "moonglade_marsh",
+          "id": "mangrove_leaf_color",
+          "value": "pink"
+        }
+      },
+      {
+        "directory": "mangrove_leaves_purple",
+        "condition": {
+          "condition": "catharsis:config",
+          "pack": "moonglade_marsh",
+          "id": "mangrove_leaf_color",
+          "value": "purple"
+        }
+      },
+      {
+        "directory": "mangrove_leaves_white",
+        "condition": {
+          "condition": "catharsis:config",
+          "pack": "moonglade_marsh",
+          "id": "mangrove_leaf_color",
+          "value": "white"
+        }
+      },
+      {
+        "directory": "mangrove_leaves_grey",
+        "condition": {
+          "condition": "catharsis:config",
+          "pack": "moonglade_marsh",
+          "id": "mangrove_leaf_color",
+          "value": "grey"
+        }
+      },
+      {
+        "directory": "mangrove_leaves_black",
+        "condition": {
+          "condition": "catharsis:config",
+          "pack": "moonglade_marsh",
+          "id": "mangrove_leaf_color",
+          "value": "black"
+        }
+      },
+      {
+        "directory": "grass_color_red",
+        "condition": {
+          "condition": "catharsis:config",
+          "pack": "moonglade_marsh",
+          "id": "grass_color",
+          "value": "red"
+        }
+      },
+      {
+        "directory": "foliage_color_red",
+        "condition": {
+          "condition": "fabric:and",
+          "values": [
+            {
+              "condition": "catharsis:config",
+              "pack": "moonglade_marsh",
+              "id": "grass_color",
+              "value": "red"
+            },
+            {
+              "condition": "fabric:not",
+              "value": {
+                "condition": "catharsis:config",
+                "pack": "moonglade_marsh",
+                "id": "hide_foliage"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "directory": "lily_pad_color_red",
+        "condition": {
+          "condition": "fabric:and",
+          "values": [
+            {
+              "condition": "catharsis:config",
+              "pack": "moonglade_marsh",
+              "id": "grass_color",
+              "value": "red"
+            },
+            {
+              "condition": "fabric:not",
+              "value": {
+                "condition": "catharsis:config",
+                "pack": "moonglade_marsh",
+                "id": "hide_lily_pads"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "directory": "grass_color_orange",
+        "condition": {
+          "condition": "catharsis:config",
+          "pack": "moonglade_marsh",
+          "id": "grass_color",
+          "value": "orange"
+        }
+      },
+      {
+        "directory": "foliage_color_orange",
+        "condition": {
+          "condition": "fabric:and",
+          "values": [
+            {
+              "condition": "catharsis:config",
+              "pack": "moonglade_marsh",
+              "id": "grass_color",
+              "value": "orange"
+            },
+            {
+              "condition": "fabric:not",
+              "value": {
+                "condition": "catharsis:config",
+                "pack": "moonglade_marsh",
+                "id": "hide_foliage"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "directory": "lily_pad_color_orange",
+        "condition": {
+          "condition": "fabric:and",
+          "values": [
+            {
+              "condition": "catharsis:config",
+              "pack": "moonglade_marsh",
+              "id": "grass_color",
+              "value": "orange"
+            },
+            {
+              "condition": "fabric:not",
+              "value": {
+                "condition": "catharsis:config",
+                "pack": "moonglade_marsh",
+                "id": "hide_lily_pads"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "directory": "grass_color_yellow",
+        "condition": {
+          "condition": "catharsis:config",
+          "pack": "moonglade_marsh",
+          "id": "grass_color",
+          "value": "yellow"
+        }
+      },
+      {
+        "directory": "foliage_color_yellow",
+        "condition": {
+          "condition": "fabric:and",
+          "values": [
+            {
+              "condition": "catharsis:config",
+              "pack": "moonglade_marsh",
+              "id": "grass_color",
+              "value": "yellow"
+            },
+            {
+              "condition": "fabric:not",
+              "value": {
+                "condition": "catharsis:config",
+                "pack": "moonglade_marsh",
+                "id": "hide_foliage"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "directory": "lily_pad_color_yellow",
+        "condition": {
+          "condition": "fabric:and",
+          "values": [
+            {
+              "condition": "catharsis:config",
+              "pack": "moonglade_marsh",
+              "id": "grass_color",
+              "value": "yellow"
+            },
+            {
+              "condition": "fabric:not",
+              "value": {
+                "condition": "catharsis:config",
+                "pack": "moonglade_marsh",
+                "id": "hide_lily_pads"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "directory": "grass_color_lime",
+        "condition": {
+          "condition": "catharsis:config",
+          "pack": "moonglade_marsh",
+          "id": "grass_color",
+          "value": "lime"
+        }
+      },
+      {
+        "directory": "foliage_color_lime",
+        "condition": {
+          "condition": "fabric:and",
+          "values": [
+            {
+              "condition": "catharsis:config",
+              "pack": "moonglade_marsh",
+              "id": "grass_color",
+              "value": "lime"
+            },
+            {
+              "condition": "fabric:not",
+              "value": {
+                "condition": "catharsis:config",
+                "pack": "moonglade_marsh",
+                "id": "hide_foliage"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "directory": "lily_pad_color_lime",
+        "condition": {
+          "condition": "fabric:and",
+          "values": [
+            {
+              "condition": "catharsis:config",
+              "pack": "moonglade_marsh",
+              "id": "grass_color",
+              "value": "lime"
+            },
+            {
+              "condition": "fabric:not",
+              "value": {
+                "condition": "catharsis:config",
+                "pack": "moonglade_marsh",
+                "id": "hide_lily_pads"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "directory": "grass_color_green",
+        "condition": {
+          "condition": "catharsis:config",
+          "pack": "moonglade_marsh",
+          "id": "grass_color",
+          "value": "green"
+        }
+      },
+      {
+        "directory": "foliage_color_green",
+        "condition": {
+          "condition": "fabric:and",
+          "values": [
+            {
+              "condition": "catharsis:config",
+              "pack": "moonglade_marsh",
+              "id": "grass_color",
+              "value": "green"
+            },
+            {
+              "condition": "fabric:not",
+              "value": {
+                "condition": "catharsis:config",
+                "pack": "moonglade_marsh",
+                "id": "hide_foliage"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "directory": "lily_pad_color_green",
+        "condition": {
+          "condition": "fabric:and",
+          "values": [
+            {
+              "condition": "catharsis:config",
+              "pack": "moonglade_marsh",
+              "id": "grass_color",
+              "value": "green"
+            },
+            {
+              "condition": "fabric:not",
+              "value": {
+                "condition": "catharsis:config",
+                "pack": "moonglade_marsh",
+                "id": "hide_lily_pads"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "directory": "grass_color_teal",
+        "condition": {
+          "condition": "catharsis:config",
+          "pack": "moonglade_marsh",
+          "id": "grass_color",
+          "value": "teal"
+        }
+      },
+      {
+        "directory": "foliage_color_teal",
+        "condition": {
+          "condition": "fabric:and",
+          "values": [
+            {
+              "condition": "catharsis:config",
+              "pack": "moonglade_marsh",
+              "id": "grass_color",
+              "value": "teal"
+            },
+            {
+              "condition": "fabric:not",
+              "value": {
+                "condition": "catharsis:config",
+                "pack": "moonglade_marsh",
+                "id": "hide_foliage"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "directory": "lily_pad_color_teal",
+        "condition": {
+          "condition": "fabric:and",
+          "values": [
+            {
+              "condition": "catharsis:config",
+              "pack": "moonglade_marsh",
+              "id": "grass_color",
+              "value": "teal"
+            },
+            {
+              "condition": "fabric:not",
+              "value": {
+                "condition": "catharsis:config",
+                "pack": "moonglade_marsh",
+                "id": "hide_lily_pads"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "directory": "grass_color_light_blue",
+        "condition": {
+          "condition": "catharsis:config",
+          "pack": "moonglade_marsh",
+          "id": "grass_color",
+          "value": "light_blue"
+        }
+      },
+      {
+        "directory": "foliage_color_light_blue",
+        "condition": {
+          "condition": "fabric:and",
+          "values": [
+            {
+              "condition": "catharsis:config",
+              "pack": "moonglade_marsh",
+              "id": "grass_color",
+              "value": "light_blue"
+            },
+            {
+              "condition": "fabric:not",
+              "value": {
+                "condition": "catharsis:config",
+                "pack": "moonglade_marsh",
+                "id": "hide_foliage"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "directory": "lily_pad_color_light_blue",
+        "condition": {
+          "condition": "fabric:and",
+          "values": [
+            {
+              "condition": "catharsis:config",
+              "pack": "moonglade_marsh",
+              "id": "grass_color",
+              "value": "light_blue"
+            },
+            {
+              "condition": "fabric:not",
+              "value": {
+                "condition": "catharsis:config",
+                "pack": "moonglade_marsh",
+                "id": "hide_lily_pads"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "directory": "grass_color_blue",
+        "condition": {
+          "condition": "catharsis:config",
+          "pack": "moonglade_marsh",
+          "id": "grass_color",
+          "value": "blue"
+        }
+      },
+      {
+        "directory": "foliage_color_blue",
+        "condition": {
+          "condition": "fabric:and",
+          "values": [
+            {
+              "condition": "catharsis:config",
+              "pack": "moonglade_marsh",
+              "id": "grass_color",
+              "value": "blue"
+            },
+            {
+              "condition": "fabric:not",
+              "value": {
+                "condition": "catharsis:config",
+                "pack": "moonglade_marsh",
+                "id": "hide_foliage"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "directory": "lily_pad_color_blue",
+        "condition": {
+          "condition": "fabric:and",
+          "values": [
+            {
+              "condition": "catharsis:config",
+              "pack": "moonglade_marsh",
+              "id": "grass_color",
+              "value": "blue"
+            },
+            {
+              "condition": "fabric:not",
+              "value": {
+                "condition": "catharsis:config",
+                "pack": "moonglade_marsh",
+                "id": "hide_lily_pads"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "directory": "grass_color_pink",
+        "condition": {
+          "condition": "catharsis:config",
+          "pack": "moonglade_marsh",
+          "id": "grass_color",
+          "value": "pink"
+        }
+      },
+      {
+        "directory": "foliage_color_pink",
+        "condition": {
+          "condition": "fabric:and",
+          "values": [
+            {
+              "condition": "catharsis:config",
+              "pack": "moonglade_marsh",
+              "id": "grass_color",
+              "value": "pink"
+            },
+            {
+              "condition": "fabric:not",
+              "value": {
+                "condition": "catharsis:config",
+                "pack": "moonglade_marsh",
+                "id": "hide_foliage"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "directory": "lily_pad_color_pink",
+        "condition": {
+          "condition": "fabric:and",
+          "values": [
+            {
+              "condition": "catharsis:config",
+              "pack": "moonglade_marsh",
+              "id": "grass_color",
+              "value": "pink"
+            },
+            {
+              "condition": "fabric:not",
+              "value": {
+                "condition": "catharsis:config",
+                "pack": "moonglade_marsh",
+                "id": "hide_lily_pads"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "directory": "grass_color_purple",
+        "condition": {
+          "condition": "catharsis:config",
+          "pack": "moonglade_marsh",
+          "id": "grass_color",
+          "value": "purple"
+        }
+      },
+      {
+        "directory": "foliage_color_purple",
+        "condition": {
+          "condition": "fabric:and",
+          "values": [
+            {
+              "condition": "catharsis:config",
+              "pack": "moonglade_marsh",
+              "id": "grass_color",
+              "value": "purple"
+            },
+            {
+              "condition": "fabric:not",
+              "value": {
+                "condition": "catharsis:config",
+                "pack": "moonglade_marsh",
+                "id": "hide_foliage"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "directory": "lily_pad_color_purple",
+        "condition": {
+          "condition": "fabric:and",
+          "values": [
+            {
+              "condition": "catharsis:config",
+              "pack": "moonglade_marsh",
+              "id": "grass_color",
+              "value": "purple"
+            },
+            {
+              "condition": "fabric:not",
+              "value": {
+                "condition": "catharsis:config",
+                "pack": "moonglade_marsh",
+                "id": "hide_lily_pads"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "directory": "grass_color_white",
+        "condition": {
+          "condition": "catharsis:config",
+          "pack": "moonglade_marsh",
+          "id": "grass_color",
+          "value": "white"
+        }
+      },
+      {
+        "directory": "foliage_color_white",
+        "condition": {
+          "condition": "fabric:and",
+          "values": [
+            {
+              "condition": "catharsis:config",
+              "pack": "moonglade_marsh",
+              "id": "grass_color",
+              "value": "white"
+            },
+            {
+              "condition": "fabric:not",
+              "value": {
+                "condition": "catharsis:config",
+                "pack": "moonglade_marsh",
+                "id": "hide_foliage"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "directory": "lily_pad_color_white",
+        "condition": {
+          "condition": "fabric:and",
+          "values": [
+            {
+              "condition": "catharsis:config",
+              "pack": "moonglade_marsh",
+              "id": "grass_color",
+              "value": "white"
+            },
+            {
+              "condition": "fabric:not",
+              "value": {
+                "condition": "catharsis:config",
+                "pack": "moonglade_marsh",
+                "id": "hide_lily_pads"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "directory": "grass_color_grey",
+        "condition": {
+          "condition": "catharsis:config",
+          "pack": "moonglade_marsh",
+          "id": "grass_color",
+          "value": "grey"
+        }
+      },
+      {
+        "directory": "foliage_color_grey",
+        "condition": {
+          "condition": "fabric:and",
+          "values": [
+            {
+              "condition": "catharsis:config",
+              "pack": "moonglade_marsh",
+              "id": "grass_color",
+              "value": "grey"
+            },
+            {
+              "condition": "fabric:not",
+              "value": {
+                "condition": "catharsis:config",
+                "pack": "moonglade_marsh",
+                "id": "hide_foliage"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "directory": "lily_pad_color_grey",
+        "condition": {
+          "condition": "fabric:and",
+          "values": [
+            {
+              "condition": "catharsis:config",
+              "pack": "moonglade_marsh",
+              "id": "grass_color",
+              "value": "grey"
+            },
+            {
+              "condition": "fabric:not",
+              "value": {
+                "condition": "catharsis:config",
+                "pack": "moonglade_marsh",
+                "id": "hide_lily_pads"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "directory": "grass_color_black",
+        "condition": {
+          "condition": "catharsis:config",
+          "pack": "moonglade_marsh",
+          "id": "grass_color",
+          "value": "black"
+        }
+      },
+      {
+        "directory": "foliage_color_black",
+        "condition": {
+          "condition": "fabric:and",
+          "values": [
+            {
+              "condition": "catharsis:config",
+              "pack": "moonglade_marsh",
+              "id": "grass_color",
+              "value": "black"
+            },
+            {
+              "condition": "fabric:not",
+              "value": {
+                "condition": "catharsis:config",
+                "pack": "moonglade_marsh",
+                "id": "hide_foliage"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "directory": "lily_pad_color_black",
+        "condition": {
+          "condition": "fabric:and",
+          "values": [
+            {
+              "condition": "catharsis:config",
+              "pack": "moonglade_marsh",
+              "id": "grass_color",
+              "value": "black"
+            },
+            {
+              "condition": "fabric:not",
+              "value": {
+                "condition": "catharsis:config",
+                "pack": "moonglade_marsh",
+                "id": "hide_lily_pads"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "directory": "hide_foliage",
+        "condition": {
+          "condition": "catharsis:config",
+          "pack": "moonglade_marsh",
+          "id": "hide_foliage"
+        }
+      },
+      {
+        "directory": "hide_lily_pads",
+        "condition": {
+          "condition": "catharsis:config",
+          "pack": "moonglade_marsh",
+          "id": "hide_lily_pads"
+        }
+      },
+      {
+        "directory": "mud_as_packed_mud",
+        "condition": {
+          "condition": "catharsis:config",
+          "pack": "moonglade_marsh",
+          "id": "mud_type",
+          "value": "packed_mud"
+        }
+      },
+      {
+        "directory": "mud_as_mud_bricks",
+        "condition": {
+          "condition": "catharsis:config",
+          "pack": "moonglade_marsh",
+          "id": "mud_type",
+          "value": "mud_bricks"
+        }
+      },
+      {
+        "directory": "mud_as_dirt",
+        "condition": {
+          "condition": "catharsis:config",
+          "pack": "moonglade_marsh",
+          "id": "mud_type",
+          "value": "dirt"
+        }
+      },
+      {
+        "directory": "mud_as_coarse_dirt",
+        "condition": {
+          "condition": "catharsis:config",
+          "pack": "moonglade_marsh",
+          "id": "mud_type",
+          "value": "coarse_dirt"
+        }
+      },
+      {
+        "directory": "mud_as_moss_block",
+        "condition": {
+          "condition": "catharsis:config",
+          "pack": "moonglade_marsh",
+          "id": "mud_type",
+          "value": "moss_block"
+        }
+      },
+      {
+        "directory": "mud_as_rooted_dirt",
+        "condition": {
+          "condition": "catharsis:config",
+          "pack": "moonglade_marsh",
+          "id": "mud_type",
+          "value": "rooted_dirt"
+        }
+      }
+    ]
+  }
+}
