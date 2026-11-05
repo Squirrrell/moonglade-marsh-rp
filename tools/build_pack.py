@@ -43,7 +43,7 @@ AREA_PAD = (4, 3, 4)  # horizontal, down, up
 FIG_LEAF_TYPES = {"azalea_leaves", "flowering_azalea_leaves"}
 MANG_LEAF_TYPES = {"mangrove_leaves"}
 REPO_AREAS = os.path.join(os.environ.get("APPDATA", ""), ".minecraft", "catharsis-repo-cache", "areas", "galatea")
-VERSION = "1.1.0"
+VERSION = "1.2.0"
 PACK_NAME = ("§cC§bu§as§dt§6o§2m §2Moonglade Marsh §fv"
              + ".".join(VERSION.split(".")[:2]))
 
