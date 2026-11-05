@@ -16,7 +16,7 @@ Open the options in-game with `/catharsis config moonglade_marsh`.
 | Mangrove Trees | Wood Type (default Mangrove) | mangrove and stripped mangrove logs and wood in the mangrove tree areas |
 | Mangrove Trees | Leaf Color | mangrove leaves anywhere on the island, plus other leaf types in the mangrove tree areas |
 | Grass & Paths | Grass Color | grass blocks, short and tall grass, ferns, vines and lily pads |
-| Grass & Paths | Path Color (Default + 13 colours) | dirt paths, the starting-area sand, sandstone slabs and stairs, and oak slabs; full sandstone blocks are left alone because buildings use them |
+| Grass & Paths | Path Color (Default + 13 colours) | dirt paths, the starting-area sand, sandstone slabs and stairs, oak slabs and stairs, and full sandstone blocks used as floor tiles. A sandstone block only changes when its top is open (air or plants above), so building walls stay cream |
 | Grass & Paths | Vegetation Follows Grass Color (on by default) | moss, cave vines, azalea bushes, dripleaf, seagrass, kelp, sugar cane, propagules, sea pickles, berry bushes, olive ground blocks (green terracotta) and hedge leaves outside the tree areas also use the grass colour |
 | Grass & Paths | Water Color (Default + 13 colours) | water on Moonglade Marsh |
 | Marsh Clutter | Hide Grass & Ferns, Hide Lily Pads | anywhere on the island; hitboxes are unchanged |

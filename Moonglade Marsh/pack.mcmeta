@@ -595,7 +595,7 @@
               "text": "",
               "extra": [
                 {
-                  "text": "Recolors the dirt paths, the sand of the starting area, the sandstone steps and the oak slab walkways.",
+                  "text": "Recolors the dirt paths, the sand of the starting area, sandstone floor tiles and steps, and the oak slab and stair walkways.",
                   "color": "gray",
                   "italic": true
                 }

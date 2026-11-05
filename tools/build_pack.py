@@ -105,8 +105,13 @@ VEGETATION = ["moss_block", "moss_carpet", "cave_vines", "cave_vines_plant", "az
 # Recoloured by "Path Color": dirt walkways, the starting-area sand, the sandstone steps in it
 # and the oak slab strips along the paths. Full sandstone blocks are left alone because the
 # buildings use them for walls.
-PATH = ["dirt_path", "sand", "oak_slab", "sandstone_slab", "sandstone_stairs",
+PATH = ["dirt_path", "sand", "oak_slab", "oak_stairs", "sandstone_slab", "sandstone_stairs",
         "smooth_sandstone_slab", "smooth_sandstone_stairs", "cut_sandstone_slab"]
+# Full sandstone blocks are used both as path tiles and in building walls, so they are only
+# recoloured when nothing solid sits on top of them (open air or plants above = floor tile).
+PATH_SURFACE = ["sandstone", "smooth_sandstone", "cut_sandstone"]
+OPEN_ABOVE = ["minecraft:air", "minecraft:cave_air", "minecraft:short_grass", "minecraft:tall_grass",
+              "minecraft:fern", "minecraft:large_fern", "minecraft:bush", "minecraft:firefly_bush"]
 # Bush / hedge leaves outside the tree areas also follow the grass colour.
 OTHER_LEAVES = [l for l in LEAVES if l not in FIG_LEAF_TYPES | MANG_LEAF_TYPES]
 # Catharsis tries replacement files in namespace order (vanilla resource stacks are a TreeMap),
@@ -494,6 +499,13 @@ def build():
             vs = tinted_virtual_state(b, color, rgb, tint_all=True)
             wjson(f"{d}/assets/{NS_GROUND}/catharsis/block_replacements/minecraft/{b}.json",
                   on_island(redirect(vs)))
+        for b in PATH_SURFACE:
+            vs = tinted_virtual_state(b, color, rgb, tint_all=True)
+            wjson(f"{d}/assets/{NS_GROUND}/catharsis/block_replacements/minecraft/{b}.json",
+                  on_island({"type": "conditional",
+                             "condition": {"type": "relative", "offset": "0:1:0",
+                                           "condition": {"type": "id", "block": OPEN_ABOVE}},
+                             "definition": redirect(vs)}))
         overlays.append({"directory": d, "condition": cfg("path_color", color)})
 
     # ---- water colour (biome effect)
@@ -574,8 +586,8 @@ def build():
         color_dropdown("grass_color", "Grass Color",
                        "Recolors grass blocks, grass, ferns, vines and lily pads across Moonglade Marsh."),
         color_dropdown("path_color", "Path Color",
-                       "Recolors the dirt paths, the sand of the starting area, the sandstone steps "
-                       "and the oak slab walkways."),
+                       "Recolors the dirt paths, the sand of the starting area, sandstone floor tiles and "
+                       "steps, and the oak slab and stair walkways."),
         {"type": "boolean", "id": "vegetation_follows_grass", "title": "Vegetation Follows Grass Color",
          "description": desc("Also recolors moss, cave vines, azalea bushes, dripleaf, seagrass, kelp, "
                              "sugar cane, propagules, olive ground blocks and hedge leaves outside the "

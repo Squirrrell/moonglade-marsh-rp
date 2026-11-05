@@ -1,0 +1,31 @@
+{
+  "type": "conditional",
+  "condition": {
+    "type": "in_island",
+    "island": "foraging_2"
+  },
+  "definition": {
+    "type": "conditional",
+    "condition": {
+      "type": "relative",
+      "offset": "0:1:0",
+      "condition": {
+        "type": "id",
+        "block": [
+          "minecraft:air",
+          "minecraft:cave_air",
+          "minecraft:short_grass",
+          "minecraft:tall_grass",
+          "minecraft:fern",
+          "minecraft:large_fern",
+          "minecraft:bush",
+          "minecraft:firefly_bush"
+        ]
+      }
+    },
+    "definition": {
+      "type": "redirect",
+      "virtual_state": "moonglade_marsh:tint/purple/smooth_sandstone"
+    }
+  }
+}
