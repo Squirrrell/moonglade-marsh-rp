@@ -83,7 +83,30 @@ for e in meta["fabric:overlays"]["entries"]:
         errors.append(f"missing overlay dir {e['directory']}")
     check_cond(e["condition"], e["directory"])
 
-counts = {"replacements": 0, "states": 0, "models": 0}
+VISUAL_ATTRS = {f"minecraft:visual/{a}" for a in (
+    "sun_angle", "moon_angle", "star_angle", "star_brightness", "sky_color", "fog_color", "cloud_color",
+    "sky_light_color", "sky_light_factor", "sunrise_sunset_color", "moon_phase", "ambient_light_color")}
+
+
+def walk_areas(obj, out):
+    if isinstance(obj, dict):
+        if obj.get("type") == "per_area":
+            out.update(obj.get("entries", {}).keys())
+        if obj.get("type") == "in_area":
+            out.add(obj["area"])
+        for v in obj.values():
+            walk_areas(v, out)
+    elif isinstance(obj, list):
+        for v in obj:
+            walk_areas(v, out)
+
+
+def area_exists(ref):
+    ns, _ = split(ref)
+    return ns == "catharsis" or exists("catharsis/areas", ref, ".json")
+
+
+counts = {"replacements": 0, "states": 0, "models": 0, "environment": 0}
 for dp, _, fs in os.walk(pack):
     for f in fs:
         if not f.endswith(".json"):
@@ -95,6 +118,16 @@ for dp, _, fs in os.walk(pack):
         except Exception as ex:  # noqa: BLE001
             errors.append(f"{rel}: invalid json {ex}")
             continue
+        areas = set()
+        walk_areas(data, areas)
+        for a in areas:
+            if not area_exists(a):
+                errors.append(f"{rel}: missing area {a}")
+        if "/catharsis/environment_modifier/" in rel:
+            counts["environment"] += 1
+            for m in data.get("modifiers", [data]):
+                if m.get("type") == "environmental_attribute" and m["attribute"] not in VISUAL_ATTRS:
+                    errors.append(f"{rel}: unexpected attribute {m['attribute']}")
         if "/catharsis/block_replacements/" in rel:
             counts["replacements"] += 1
             vs = set()
