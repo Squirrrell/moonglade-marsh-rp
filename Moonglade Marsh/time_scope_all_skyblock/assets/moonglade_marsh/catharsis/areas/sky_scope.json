@@ -1,0 +1,29 @@
+{
+  "type": "on_island",
+  "islands": [
+    "dynamic",
+    "hub",
+    "dungeon_hub",
+    "farming_1",
+    "foraging_1",
+    "mining_1",
+    "mining_2",
+    "mining_3",
+    "crystal_hollows",
+    "mineshaft",
+    "combat_1",
+    "combat_3",
+    "crimson_isle",
+    "garden",
+    "fishing_1",
+    "lotus_atoll",
+    "foraging_2",
+    "foraging_3",
+    "safari",
+    "rift",
+    "dark_auction",
+    "dungeon",
+    "kuudra",
+    "winter"
+  ]
+}

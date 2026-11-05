@@ -1,0 +1,89 @@
+{
+  "type": "composite",
+  "condition": {
+    "type": "in_area",
+    "area": "moonglade_marsh:sky_scope"
+  },
+  "modifiers": [
+    {
+      "type": "environmental_attribute",
+      "attribute": "minecraft:visual/sun_angle",
+      "provider": {
+        "type": "override",
+        "value": 271.3147
+      }
+    },
+    {
+      "type": "environmental_attribute",
+      "attribute": "minecraft:visual/moon_angle",
+      "provider": {
+        "type": "override",
+        "value": 91.3147
+      }
+    },
+    {
+      "type": "environmental_attribute",
+      "attribute": "minecraft:visual/star_angle",
+      "provider": {
+        "type": "override",
+        "value": 271.3147
+      }
+    },
+    {
+      "type": "environmental_attribute",
+      "attribute": "minecraft:visual/star_brightness",
+      "provider": {
+        "type": "override",
+        "value": 0.249
+      }
+    },
+    {
+      "type": "environmental_attribute",
+      "attribute": "minecraft:visual/sky_color",
+      "provider": {
+        "type": "override",
+        "value": "#415a89"
+      }
+    },
+    {
+      "type": "environmental_attribute",
+      "attribute": "minecraft:visual/fog_color",
+      "provider": {
+        "type": "override",
+        "value": "#6f7d93"
+      }
+    },
+    {
+      "type": "environmental_attribute",
+      "attribute": "minecraft:visual/cloud_color",
+      "provider": {
+        "type": "override",
+        "value": "#cc95959b"
+      }
+    },
+    {
+      "type": "environmental_attribute",
+      "attribute": "minecraft:visual/sky_light_color",
+      "provider": {
+        "type": "override",
+        "value": "#9999ff"
+      }
+    },
+    {
+      "type": "environmental_attribute",
+      "attribute": "minecraft:visual/sky_light_factor",
+      "provider": {
+        "type": "override",
+        "value": 0.4188
+      }
+    },
+    {
+      "type": "environmental_attribute",
+      "attribute": "minecraft:visual/sunrise_sunset_color",
+      "provider": {
+        "type": "override",
+        "value": "#fbdb6533"
+      }
+    }
+  ]
+}

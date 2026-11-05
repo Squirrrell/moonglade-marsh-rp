@@ -1,0 +1,89 @@
+{
+  "type": "composite",
+  "condition": {
+    "type": "in_area",
+    "area": "moonglade_marsh:sky_scope"
+  },
+  "modifiers": [
+    {
+      "type": "environmental_attribute",
+      "attribute": "minecraft:visual/sun_angle",
+      "provider": {
+        "type": "override",
+        "value": 0.0
+      }
+    },
+    {
+      "type": "environmental_attribute",
+      "attribute": "minecraft:visual/moon_angle",
+      "provider": {
+        "type": "override",
+        "value": 180.0
+      }
+    },
+    {
+      "type": "environmental_attribute",
+      "attribute": "minecraft:visual/star_angle",
+      "provider": {
+        "type": "override",
+        "value": 0.0
+      }
+    },
+    {
+      "type": "environmental_attribute",
+      "attribute": "minecraft:visual/star_brightness",
+      "provider": {
+        "type": "override",
+        "value": 0.0
+      }
+    },
+    {
+      "type": "environmental_attribute",
+      "attribute": "minecraft:visual/sky_color",
+      "provider": {
+        "type": "override",
+        "value": "#78a7ff"
+      }
+    },
+    {
+      "type": "environmental_attribute",
+      "attribute": "minecraft:visual/fog_color",
+      "provider": {
+        "type": "override",
+        "value": "#c0d8ff"
+      }
+    },
+    {
+      "type": "environmental_attribute",
+      "attribute": "minecraft:visual/cloud_color",
+      "provider": {
+        "type": "override",
+        "value": "#ccffffff"
+      }
+    },
+    {
+      "type": "environmental_attribute",
+      "attribute": "minecraft:visual/sky_light_color",
+      "provider": {
+        "type": "override",
+        "value": "#ffffff"
+      }
+    },
+    {
+      "type": "environmental_attribute",
+      "attribute": "minecraft:visual/sky_light_factor",
+      "provider": {
+        "type": "override",
+        "value": 1.0
+      }
+    },
+    {
+      "type": "environmental_attribute",
+      "attribute": "minecraft:visual/sunrise_sunset_color",
+      "provider": {
+        "type": "override",
+        "value": "#00ffe533"
+      }
+    }
+  ]
+}

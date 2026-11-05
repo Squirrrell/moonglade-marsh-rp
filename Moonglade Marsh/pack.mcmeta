@@ -630,6 +630,99 @@
           {
             "type": "separator",
             "title": {
+              "text": "Time of Day",
+              "color": "aqua",
+              "bold": true
+            }
+          },
+          {
+            "type": "dropdown",
+            "id": "time_of_day",
+            "title": "Sky",
+            "description": {
+              "text": "",
+              "extra": [
+                {
+                  "text": "Locks the sky, sun, moon, stars and sky lighting to a time of day. Client-side only; the server time and mob behaviour are unchanged.",
+                  "color": "gray",
+                  "italic": true
+                }
+              ]
+            },
+            "options": [
+              {
+                "value": "default",
+                "text": {
+                  "text": "Server Time",
+                  "color": "gray"
+                },
+                "default": true
+              },
+              {
+                "value": "sunrise",
+                "text": {
+                  "text": "Sunrise",
+                  "color": "gold"
+                }
+              },
+              {
+                "value": "day",
+                "text": {
+                  "text": "Day",
+                  "color": "yellow"
+                }
+              },
+              {
+                "value": "sunset",
+                "text": {
+                  "text": "Sunset",
+                  "color": "red"
+                }
+              },
+              {
+                "value": "night",
+                "text": {
+                  "text": "Night",
+                  "color": "dark_blue"
+                }
+              }
+            ]
+          },
+          {
+            "type": "dropdown",
+            "id": "time_scope",
+            "title": "Sky Applies To",
+            "description": {
+              "text": "",
+              "extra": [
+                {
+                  "text": "Where the chosen sky is used: only on Moonglade Marsh, or on every SkyBlock island (hub, dungeons, Garden, Rift, ...).",
+                  "color": "gray",
+                  "italic": true
+                }
+              ]
+            },
+            "options": [
+              {
+                "value": "moonglade_marsh",
+                "text": {
+                  "text": "Moonglade Marsh Only",
+                  "color": "dark_green"
+                },
+                "default": true
+              },
+              {
+                "value": "all_skyblock",
+                "text": {
+                  "text": "All of SkyBlock",
+                  "color": "gold"
+                }
+              }
+            ]
+          },
+          {
+            "type": "separator",
+            "title": {
               "text": "Ground",
               "color": "gray",
               "bold": true
@@ -1879,6 +1972,51 @@
           "pack": "moonglade_marsh",
           "id": "mud_type",
           "value": "rooted_dirt"
+        }
+      },
+      {
+        "directory": "time_scope_all_skyblock",
+        "condition": {
+          "condition": "catharsis:config",
+          "pack": "moonglade_marsh",
+          "id": "time_scope",
+          "value": "all_skyblock"
+        }
+      },
+      {
+        "directory": "time_sunrise",
+        "condition": {
+          "condition": "catharsis:config",
+          "pack": "moonglade_marsh",
+          "id": "time_of_day",
+          "value": "sunrise"
+        }
+      },
+      {
+        "directory": "time_day",
+        "condition": {
+          "condition": "catharsis:config",
+          "pack": "moonglade_marsh",
+          "id": "time_of_day",
+          "value": "day"
+        }
+      },
+      {
+        "directory": "time_sunset",
+        "condition": {
+          "condition": "catharsis:config",
+          "pack": "moonglade_marsh",
+          "id": "time_of_day",
+          "value": "sunset"
+        }
+      },
+      {
+        "directory": "time_night",
+        "condition": {
+          "condition": "catharsis:config",
+          "pack": "moonglade_marsh",
+          "id": "time_of_day",
+          "value": "night"
         }
       }
     ]

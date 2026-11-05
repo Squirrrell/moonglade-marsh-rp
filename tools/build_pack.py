@@ -19,9 +19,13 @@ import json
 import os
 import shutil
 import sys
+import time
 import zipfile
 
 from PIL import Image
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from sky_time import evaluate as evaluate_sky  # noqa: E402
 
 PACK_ID = "moonglade_marsh"
 NS = "moonglade_marsh"            # shared virtual states / models / textures
@@ -90,6 +94,26 @@ LEAVES = ["oak_leaves", "spruce_leaves", "birch_leaves", "jungle_leaves", "acaci
 GRASS_BLOCKS = ["grass_block", "vine"]                      # follow grass colour
 FOLIAGE = ["short_grass", "tall_grass", "fern", "large_fern"]  # follow grass colour, can hide
 LILY = ["lily_pad"]
+
+AREA_SKY = f"{NS}:sky_scope"  # redefined by the "time_scope_all_skyblock" overlay
+# Every SkyBlockIsland id known to skyblock-api 4.2.25 (as used by Catharsis beta.22).
+ALL_SKYBLOCK_ISLANDS = [
+    "dynamic", "hub", "dungeon_hub", "farming_1", "foraging_1", "mining_1", "mining_2", "mining_3",
+    "crystal_hollows", "mineshaft", "combat_1", "combat_3", "crimson_isle", "garden", "fishing_1",
+    "lotus_atoll", "foraging_2", "foraging_3", "safari", "rift", "dark_auction", "dungeon", "kuudra",
+    "winter",
+]
+TIME_SCOPES = [  # value, label, colour, islands
+    ("moonglade_marsh", "Moonglade Marsh Only", "dark_green", [ISLAND]),
+    ("all_skyblock", "All of SkyBlock", "gold", ALL_SKYBLOCK_ISLANDS),
+]
+TIMES = [  # value, label, colour, overworld tick whose sky is locked in (None = server time)
+    ("default", "Server Time", "gray", None),
+    ("sunrise", "Sunrise", "gold", 23300),
+    ("day", "Day", "yellow", 6000),
+    ("sunset", "Sunset", "red", 12700),
+    ("night", "Night", "dark_blue", 18000),
+]
 
 MUD = [  # value, label, colour, vanilla block used
     ("mud", "Mud", "dark_gray", None),
@@ -329,9 +353,26 @@ def vanilla_virtual_state(block):
 
 def build():
     os.makedirs(OUT, exist_ok=True)
+
+    def retry(func, path, _exc):  # Windows: editors/indexers briefly lock files
+        for _ in range(20):
+            time.sleep(0.25)
+            try:
+                func(path)
+                return
+            except OSError:
+                pass
+        raise
+
     for entry in os.listdir(OUT):  # empty it (the folder itself may be in use)
         p = os.path.join(OUT, entry)
-        shutil.rmtree(p) if os.path.isdir(p) else os.remove(p)
+        if os.path.isdir(p):
+            shutil.rmtree(p, onexc=retry)
+        else:
+            try:
+                os.remove(p)
+            except OSError as e:
+                retry(os.remove, p, e)
     overlays = []
 
     # padded tree areas
@@ -424,6 +465,30 @@ def build():
               on_island(redirect(f"{NS}:vanilla/{block}")))
         overlays.append({"directory": d, "condition": cfg("mud_type", v)})
 
+    # ---- time of day (client-side sky lock via Catharsis environment modifiers)
+    sky_area_path = f"assets/{NS}/catharsis/areas/{AREA_SKY.split(':', 1)[1]}.json"
+    for i, (v, _, _, islands) in enumerate(TIME_SCOPES):
+        area = {"type": "on_island", "islands": islands}
+        if i == 0:
+            wjson(sky_area_path, area)  # default scope lives in the base pack
+        else:
+            d = f"time_scope_{v}"
+            wjson(f"{d}/{sky_area_path}", area)
+            overlays.append({"directory": d, "condition": cfg("time_scope", v)})
+    for v, _, _, tick in TIMES:
+        if tick is None:
+            continue
+        d = f"time_{v}"
+        values = evaluate_sky(VAN, tick)
+        wjson(f"{d}/assets/{NS}/catharsis/environment_modifier/time_of_day.json", {
+            "type": "composite",
+            "condition": {"type": "in_area", "area": AREA_SKY},
+            "modifiers": [{"type": "environmental_attribute", "attribute": attr,
+                           "provider": {"type": "override", "value": val}}
+                          for attr, val in values.items()],
+        })
+        overlays.append({"directory": d, "condition": cfg("time_of_day", v)})
+
     # ---- pack.mcmeta
     def wood_dropdown(id_, default):
         return {"type": "dropdown", "id": id_, "title": "Wood Type",
@@ -453,6 +518,17 @@ def build():
          "default": False},
         {"type": "boolean", "id": "hide_lily_pads", "title": "Hide Lily Pads",
          "description": desc("Makes lily pads invisible. Their hitbox still exists."), "default": False},
+        {"type": "separator", "title": text("Time of Day", "aqua", True)},
+        {"type": "dropdown", "id": "time_of_day", "title": "Sky",
+         "description": desc("Locks the sky, sun, moon, stars and sky lighting to a time of day. "
+                             "Client-side only; the server time and mob behaviour are unchanged."),
+         "options": [dict({"value": v, "text": text(l, c)}, **({"default": True} if t is None else {}))
+                     for v, l, c, t in TIMES]},
+        {"type": "dropdown", "id": "time_scope", "title": "Sky Applies To",
+         "description": desc("Where the chosen sky is used: only on Moonglade Marsh, or on every "
+                             "SkyBlock island (hub, dungeons, Garden, Rift, ...)."),
+         "options": [dict({"value": v, "text": text(l, c)}, **({"default": True} if i == 0 else {}))
+                     for i, (v, l, c, _) in enumerate(TIME_SCOPES)]},
         {"type": "separator", "title": text("Ground", "gray", True)},
         {"type": "dropdown", "id": "mud_type", "title": "Mud Texture",
          "description": desc("Replaces mud blocks on the island."),

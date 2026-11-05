@@ -1,0 +1,89 @@
+{
+  "type": "composite",
+  "condition": {
+    "type": "in_area",
+    "area": "moonglade_marsh:sky_scope"
+  },
+  "modifiers": [
+    {
+      "type": "environmental_attribute",
+      "attribute": "minecraft:visual/sun_angle",
+      "provider": {
+        "type": "override",
+        "value": 180.0
+      }
+    },
+    {
+      "type": "environmental_attribute",
+      "attribute": "minecraft:visual/moon_angle",
+      "provider": {
+        "type": "override",
+        "value": 0.0
+      }
+    },
+    {
+      "type": "environmental_attribute",
+      "attribute": "minecraft:visual/star_angle",
+      "provider": {
+        "type": "override",
+        "value": 180.0
+      }
+    },
+    {
+      "type": "environmental_attribute",
+      "attribute": "minecraft:visual/star_brightness",
+      "provider": {
+        "type": "override",
+        "value": 0.5
+      }
+    },
+    {
+      "type": "environmental_attribute",
+      "attribute": "minecraft:visual/sky_color",
+      "provider": {
+        "type": "override",
+        "value": "#000000"
+      }
+    },
+    {
+      "type": "environmental_attribute",
+      "attribute": "minecraft:visual/fog_color",
+      "provider": {
+        "type": "override",
+        "value": "#0d0e16"
+      }
+    },
+    {
+      "type": "environmental_attribute",
+      "attribute": "minecraft:visual/cloud_color",
+      "provider": {
+        "type": "override",
+        "value": "#cc191926"
+      }
+    },
+    {
+      "type": "environmental_attribute",
+      "attribute": "minecraft:visual/sky_light_color",
+      "provider": {
+        "type": "override",
+        "value": "#7a7aff"
+      }
+    },
+    {
+      "type": "environmental_attribute",
+      "attribute": "minecraft:visual/sky_light_factor",
+      "provider": {
+        "type": "override",
+        "value": 0.24
+      }
+    },
+    {
+      "type": "environmental_attribute",
+      "attribute": "minecraft:visual/sunrise_sunset_color",
+      "provider": {
+        "type": "override",
+        "value": "#00b23333"
+      }
+    }
+  ]
+}

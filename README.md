@@ -13,7 +13,11 @@ Open the options in-game with `/catharsis config moonglade_marsh`.
 | Mangrove Trees | Leaf Color | mangrove leaves anywhere on the island, plus other leaf types in the mangrove tree areas |
 | Grass Color | Grass Color | grass blocks, short and tall grass, ferns, vines and lily pads |
 | Marsh Clutter | Hide Grass & Ferns, Hide Lily Pads | anywhere on the island; hitboxes are unchanged |
+| Time of Day | Sky: Server Time / Sunrise / Day / Sunset / Night | locks the sun, moon, stars, sky, fog, clouds and sky lighting |
+| Time of Day | Sky Applies To: Moonglade Marsh Only / All of SkyBlock | where the chosen sky is used; All of SkyBlock covers every island skyblock-api knows, including the hub, dungeons, the Garden and the Rift |
 | Ground | Mud Texture | mud blocks |
+
+The Time of Day option only changes what your client draws. The server's time, mob spawning and anything else that depends on real time stay the same. The values are taken from the vanilla overworld `day` timeline, so each preset matches vanilla at that time. Shader packs may calculate their own sky and ignore these values.
 
 ## How it is scoped
 - Every replacement is wrapped in an `in_island: foraging_2` condition, so other islands are never affected.
@@ -30,9 +34,11 @@ Download the pack zip, put it in `.minecraft/resourcepacks`, and enable it.
 The pack in `Moonglade Marsh/` is generated. To rebuild it:
 
 ```bash
-python -I tools/build_pack.py <dir containing assets/minecraft extracted from the 26.2 client jar>
+python -I tools/build_pack.py <dir containing assets/minecraft and data/minecraft extracted from the 26.2 client jar>
 python -I tools/validate_pack.py "Moonglade Marsh" <same dir>
 ```
+
+`tools/sky_time.py` evaluates the vanilla day timeline (`data/minecraft/timeline/day.json` together with the overworld dimension type) at a given tick. Running `python -I tools/sky_time.py <dir> 6000 18000` prints the noon and midnight values.
 
 The build needs Python with Pillow. It reads the Galatea tree areas from your local Catharsis repo cache (`%APPDATA%/.minecraft/catharsis-repo-cache/areas/galatea`). The build writes the zip to the repository root; the zip is git-ignored.
 
