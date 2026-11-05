@@ -2,6 +2,10 @@
 
 A configurable recolour pack for Galatea / Moonglade Marsh in Hypixel SkyBlock (`/locraw` mode `foraging_2`). It requires the [Catharsis](https://modrinth.com/mod/catharsis) mod, version 1.0.0-beta.22 or newer.
 
+![Red mangrove trees under a night sky](images/1.png)
+![Purple fig trees and red mangroves at night](images/2.png)
+![Purple fig trees at sunset](images/3.png)
+
 ## Options
 Open the options in-game with `/catharsis config moonglade_marsh`.
 
