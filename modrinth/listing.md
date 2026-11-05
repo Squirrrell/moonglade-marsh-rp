@@ -22,13 +22,13 @@
 ## Version upload
 | Field | Value |
 |---|---|
-| File | `§cC§bu§as§dt§6o§2m §2Moonglade Marsh §fv1.0.zip`. You can rename it to `Custom-Moonglade-Marsh-1.0.0.zip` first; renaming doesn't affect the pack. |
-| Version number | 1.0.0 |
-| Version name | Custom Moonglade Marsh 1.0.0 |
+| File | `§cC§bu§as§dt§6o§2m §2Moonglade Marsh §fv1.1.zip`, or `Custom-Moonglade-Marsh-1.1.0.zip` from the GitHub release. You can rename it to `Custom-Moonglade-Marsh-1.1.0.zip` first; renaming doesn't affect the pack. |
+| Version number | 1.1.0 |
+| Version name | Custom Moonglade Marsh 1.1.0 |
 | Release channel | Beta (it hasn't had much in-game testing) |
 | Loaders | Minecraft (the resource pack loader) |
 | Game versions | 26.2 |
 | Dependencies | Catharsis, **required** |
-| Changelog | Initial release. |
+| Changelog | Added a Time of Day option (Sunrise / Day / Sunset / Night, on Moonglade Marsh or all of SkyBlock). Fixed leaves at the edges of fig and mangrove trees keeping their vanilla colour. |
 
 Before publishing, check in-game that the latest build has no green leaves left.

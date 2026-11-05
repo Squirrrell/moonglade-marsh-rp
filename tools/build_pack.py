@@ -43,7 +43,9 @@ AREA_PAD = (4, 3, 4)  # horizontal, down, up
 FIG_LEAF_TYPES = {"azalea_leaves", "flowering_azalea_leaves"}
 MANG_LEAF_TYPES = {"mangrove_leaves"}
 REPO_AREAS = os.path.join(os.environ.get("APPDATA", ""), ".minecraft", "catharsis-repo-cache", "areas", "galatea")
-PACK_NAME = "§cC§bu§as§dt§6o§2m §2Moonglade Marsh §fv1.0"
+VERSION = "1.1.0"
+PACK_NAME = ("§cC§bu§as§dt§6o§2m §2Moonglade Marsh §fv"
+             + ".".join(VERSION.split(".")[:2]))
 
 # --------------------------------------------------------------------------- data
 
@@ -543,7 +545,7 @@ def build():
         },
         "catharsis:pack/v1": {
             "id": PACK_ID,
-            "version": "1.0.0",
+            "version": VERSION,
             "dependencies": {"catharsis": ">=1.0.0-beta.22"},
             "config": [{"type": "tab", "title": text("Customizable Options", "gold", True), "options": options}],
         },
