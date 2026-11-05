@@ -1,0 +1,29 @@
+{
+  "type": "conditional",
+  "condition": {
+    "type": "in_island",
+    "island": "foraging_2"
+  },
+  "definition": {
+    "type": "select",
+    "definitions": [
+      {
+        "type": "per_area",
+        "entries": {
+          "moonglade_marsh:fig_trees": {
+            "type": "redirect",
+            "virtual_state": "moonglade_marsh:vanilla/acacia_leaves"
+          },
+          "moonglade_marsh:mangrove_trees": {
+            "type": "redirect",
+            "virtual_state": "moonglade_marsh:vanilla/acacia_leaves"
+          }
+        }
+      }
+    ],
+    "fallback": {
+      "type": "redirect",
+      "virtual_state": "moonglade_marsh:tint/light_blue/acacia_leaves"
+    }
+  }
+}

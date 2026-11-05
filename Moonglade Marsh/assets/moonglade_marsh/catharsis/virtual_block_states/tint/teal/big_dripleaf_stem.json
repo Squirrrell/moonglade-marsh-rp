@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "moonglade_marsh:block/tint/teal/big_dripleaf_stem",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "moonglade_marsh:block/tint/teal/big_dripleaf_stem"
+    },
+    "facing=south": {
+      "model": "moonglade_marsh:block/tint/teal/big_dripleaf_stem",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "moonglade_marsh:block/tint/teal/big_dripleaf_stem",
+      "y": 270
+    }
+  }
+}

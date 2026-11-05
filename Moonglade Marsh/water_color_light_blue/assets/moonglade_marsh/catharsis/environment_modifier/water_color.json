@@ -1,0 +1,12 @@
+{
+  "type": "biome_effect",
+  "effect": "water_color",
+  "condition": {
+    "type": "in_area",
+    "area": "moonglade_marsh:island"
+  },
+  "provider": {
+    "type": "override",
+    "value": 6862568
+  }
+}

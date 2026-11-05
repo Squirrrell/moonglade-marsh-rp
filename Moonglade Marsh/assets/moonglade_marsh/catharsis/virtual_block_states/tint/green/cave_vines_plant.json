@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "berries=false": {
+      "model": "moonglade_marsh:block/tint/green/cave_vines_plant"
+    },
+    "berries=true": {
+      "model": "moonglade_marsh:block/tint/green/cave_vines_plant_lit"
+    }
+  }
+}

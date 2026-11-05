@@ -1,0 +1,140 @@
+{
+  "variants": {
+    "pickles=1,waterlogged=false": [
+      {
+        "model": "moonglade_marsh:block/tint/red/dead_sea_pickle"
+      },
+      {
+        "model": "moonglade_marsh:block/tint/red/dead_sea_pickle",
+        "y": 90
+      },
+      {
+        "model": "moonglade_marsh:block/tint/red/dead_sea_pickle",
+        "y": 180
+      },
+      {
+        "model": "moonglade_marsh:block/tint/red/dead_sea_pickle",
+        "y": 270
+      }
+    ],
+    "pickles=1,waterlogged=true": [
+      {
+        "model": "moonglade_marsh:block/tint/red/sea_pickle"
+      },
+      {
+        "model": "moonglade_marsh:block/tint/red/sea_pickle",
+        "y": 90
+      },
+      {
+        "model": "moonglade_marsh:block/tint/red/sea_pickle",
+        "y": 180
+      },
+      {
+        "model": "moonglade_marsh:block/tint/red/sea_pickle",
+        "y": 270
+      }
+    ],
+    "pickles=2,waterlogged=false": [
+      {
+        "model": "moonglade_marsh:block/tint/red/two_dead_sea_pickles"
+      },
+      {
+        "model": "moonglade_marsh:block/tint/red/two_dead_sea_pickles",
+        "y": 90
+      },
+      {
+        "model": "moonglade_marsh:block/tint/red/two_dead_sea_pickles",
+        "y": 180
+      },
+      {
+        "model": "moonglade_marsh:block/tint/red/two_dead_sea_pickles",
+        "y": 270
+      }
+    ],
+    "pickles=2,waterlogged=true": [
+      {
+        "model": "moonglade_marsh:block/tint/red/two_sea_pickles"
+      },
+      {
+        "model": "moonglade_marsh:block/tint/red/two_sea_pickles",
+        "y": 90
+      },
+      {
+        "model": "moonglade_marsh:block/tint/red/two_sea_pickles",
+        "y": 180
+      },
+      {
+        "model": "moonglade_marsh:block/tint/red/two_sea_pickles",
+        "y": 270
+      }
+    ],
+    "pickles=3,waterlogged=false": [
+      {
+        "model": "moonglade_marsh:block/tint/red/three_dead_sea_pickles"
+      },
+      {
+        "model": "moonglade_marsh:block/tint/red/three_dead_sea_pickles",
+        "y": 90
+      },
+      {
+        "model": "moonglade_marsh:block/tint/red/three_dead_sea_pickles",
+        "y": 180
+      },
+      {
+        "model": "moonglade_marsh:block/tint/red/three_dead_sea_pickles",
+        "y": 270
+      }
+    ],
+    "pickles=3,waterlogged=true": [
+      {
+        "model": "moonglade_marsh:block/tint/red/three_sea_pickles"
+      },
+      {
+        "model": "moonglade_marsh:block/tint/red/three_sea_pickles",
+        "y": 90
+      },
+      {
+        "model": "moonglade_marsh:block/tint/red/three_sea_pickles",
+        "y": 180
+      },
+      {
+        "model": "moonglade_marsh:block/tint/red/three_sea_pickles",
+        "y": 270
+      }
+    ],
+    "pickles=4,waterlogged=false": [
+      {
+        "model": "moonglade_marsh:block/tint/red/four_dead_sea_pickles"
+      },
+      {
+        "model": "moonglade_marsh:block/tint/red/four_dead_sea_pickles",
+        "y": 90
+      },
+      {
+        "model": "moonglade_marsh:block/tint/red/four_dead_sea_pickles",
+        "y": 180
+      },
+      {
+        "model": "moonglade_marsh:block/tint/red/four_dead_sea_pickles",
+        "y": 270
+      }
+    ],
+    "pickles=4,waterlogged=true": [
+      {
+        "model": "moonglade_marsh:block/tint/red/four_sea_pickles"
+      },
+      {
+        "model": "moonglade_marsh:block/tint/red/four_sea_pickles",
+        "y": 90
+      },
+      {
+        "model": "moonglade_marsh:block/tint/red/four_sea_pickles",
+        "y": 180
+      },
+      {
+        "model": "moonglade_marsh:block/tint/red/four_sea_pickles",
+        "y": 270
+      }
+    ]
+  }
+}

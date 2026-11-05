@@ -1,0 +1,11 @@
+{
+  "type": "conditional",
+  "condition": {
+    "type": "in_island",
+    "island": "foraging_2"
+  },
+  "definition": {
+    "type": "redirect",
+    "virtual_state": "moonglade_marsh:tint/teal/big_dripleaf"
+  }
+}

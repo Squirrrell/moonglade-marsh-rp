@@ -96,6 +96,17 @@ LEAVES = ["oak_leaves", "spruce_leaves", "birch_leaves", "jungle_leaves", "acaci
 GRASS_BLOCKS = ["grass_block", "vine"]                      # follow grass colour
 FOLIAGE = ["short_grass", "tall_grass", "fern", "large_fern"]  # follow grass colour, can hide
 LILY = ["lily_pad"]
+# Other greenery that follows the grass colour when "Vegetation Follows Grass Color" is on.
+VEGETATION = ["moss_block", "moss_carpet", "cave_vines", "cave_vines_plant", "azalea", "flowering_azalea",
+              "big_dripleaf", "big_dripleaf_stem", "small_dripleaf", "seagrass", "tall_seagrass", "kelp",
+              "kelp_plant", "sugar_cane", "mangrove_propagule", "sea_pickle", "sweet_berry_bush", "bush",
+              "firefly_bush"]
+# Bush / hedge leaves outside the tree areas also follow the grass colour.
+OTHER_LEAVES = [l for l in LEAVES if l not in FIG_LEAF_TYPES | MANG_LEAF_TYPES]
+# Catharsis tries replacement files in namespace order (vanilla resource stacks are a TreeMap),
+# so this must sort after NS_FIG / NS_MANG for tree leaf colours to win inside tree areas.
+NS_VEG = "moonglade_marsh_vegetation"
+AREA_ISLAND = f"{NS}:island"  # always just Moonglade Marsh (unlike AREA_SKY)
 
 AREA_SKY = f"{NS}:sky_scope"  # redefined by the "time_scope_all_skyblock" overlay
 # Every SkyBlockIsland id known to skyblock-api 4.2.25 (as used by Catharsis beta.22).
@@ -449,6 +460,39 @@ def build():
                       on_island(redirect(f"{NS}:tint/{color}/{b}")))
             overlays.append({"directory": d, "condition": cond})
 
+    # ---- vegetation + bush leaves follow the grass colour
+    for leaf in OTHER_LEAVES:
+        vanilla_virtual_state(leaf)
+    for color, _, _, rgb in COLORS:
+        d = f"vegetation_color_{color}"
+        for b in VEGETATION:
+            vs = tinted_virtual_state(b, color, rgb, tint_all=True)
+            wjson(f"{d}/assets/{NS_VEG}/catharsis/block_replacements/minecraft/{b}.json",
+                  on_island(redirect(vs)))
+        for leaf in OTHER_LEAVES:
+            # inside tree areas keep the vanilla leaf (tree colour rules sort first and win
+            # when a tree colour is chosen); everywhere else use the grass colour
+            wjson(f"{d}/assets/{NS_VEG}/catharsis/block_replacements/minecraft/{leaf}.json",
+                  on_island({"type": "select",
+                             "definitions": [{"type": "per_area", "entries": {
+                                 AREA_FIG: redirect(f"{NS}:vanilla/{leaf}"),
+                                 AREA_MANG: redirect(f"{NS}:vanilla/{leaf}")}}],
+                             "fallback": redirect(f"{NS}:tint/{color}/{leaf}")}))
+        overlays.append({"directory": d,
+                         "condition": c_and(cfg("grass_color", color), cfg("vegetation_follows_grass"))})
+
+    # ---- water colour (biome effect)
+    wjson(f"assets/{NS}/catharsis/areas/{AREA_ISLAND.split(':', 1)[1]}.json",
+          {"type": "on_island", "islands": [ISLAND]})
+    for color, _, _, rgb in COLORS:
+        d = f"water_color_{color}"
+        wjson(f"{d}/assets/{NS}/catharsis/environment_modifier/water_color.json", {
+            "type": "biome_effect", "effect": "water_color",
+            "condition": {"type": "in_area", "area": AREA_ISLAND},
+            "provider": {"type": "override", "value": (rgb[0] << 16) | (rgb[1] << 8) | rgb[2]},
+        })
+        overlays.append({"directory": d, "condition": cfg("water_color", color)})
+
     # ---- hide clutter
     for d, blocks, opt in (("hide_foliage", FOLIAGE, "hide_foliage"),
                            ("hide_lily_pads", LILY, "hide_lily_pads")):
@@ -514,6 +558,12 @@ def build():
         {"type": "separator", "title": text("Grass Color", "dark_green", True)},
         color_dropdown("grass_color", "Grass Color",
                        "Recolors grass blocks, grass, ferns, vines and lily pads across Moonglade Marsh."),
+        {"type": "boolean", "id": "vegetation_follows_grass", "title": "Vegetation Follows Grass Color",
+         "description": desc("Also recolors moss, cave vines, azalea bushes, dripleaf, seagrass, kelp, "
+                             "sugar cane, propagules and hedge leaves outside the trees, so the whole "
+                             "marsh matches the grass color."),
+         "default": True},
+        color_dropdown("water_color", "Water Color", "Recolors water on Moonglade Marsh."),
         {"type": "separator", "title": text("Marsh Clutter", "dark_aqua", True)},
         {"type": "boolean", "id": "hide_foliage", "title": "Hide Grass & Ferns",
          "description": desc("Hides short grass, tall grass, ferns and large ferns so logs are easier to see."),
