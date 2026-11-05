@@ -16,11 +16,12 @@ Open the options in-game with `/catharsis config moonglade_marsh`.
 | Mangrove Trees | Wood Type (default Mangrove) | mangrove and stripped mangrove logs and wood in the mangrove tree areas |
 | Mangrove Trees | Leaf Color | mangrove leaves anywhere on the island, plus other leaf types in the mangrove tree areas |
 | Grass Color | Grass Color | grass blocks, short and tall grass, ferns, vines and lily pads |
-| Grass Color | Vegetation Follows Grass Color (on by default) | moss, cave vines, azalea bushes, dripleaf, seagrass, kelp, sugar cane, propagules, sea pickles, berry bushes and hedge leaves outside the tree areas also use the grass colour |
+| Grass Color | Vegetation Follows Grass Color (on by default) | moss, cave vines, azalea bushes, dripleaf, seagrass, kelp, sugar cane, propagules, sea pickles, berry bushes, olive ground blocks (green terracotta) and hedge leaves outside the tree areas also use the grass colour |
 | Grass Color | Water Color (Default + 13 colours) | water on Moonglade Marsh |
 | Marsh Clutter | Hide Grass & Ferns, Hide Lily Pads | anywhere on the island; hitboxes are unchanged |
 | Time of Day | Sky: Server Time / Sunrise / Day / Sunset / Night | locks the sun, moon, stars, sky, fog, clouds and sky lighting |
 | Time of Day | Sky Applies To: Moonglade Marsh Only / All of SkyBlock | where the chosen sky is used; All of SkyBlock covers every island skyblock-api knows, including the hub, dungeons, the Garden and the Rift |
+| Ground | Path Color (Default + 13 colours) | the dirt paths across the island |
 | Ground | Mud Texture | mud blocks |
 
 The Time of Day option only changes what your client draws. The server's time, mob spawning and anything else that depends on real time stay the same. The values are taken from the vanilla overworld `day` timeline, so each preset matches vanilla at that time. Shader packs may calculate their own sky and ignore these values.

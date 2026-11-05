@@ -595,7 +595,7 @@
               "text": "",
               "extra": [
                 {
-                  "text": "Also recolors moss, cave vines, azalea bushes, dripleaf, seagrass, kelp, sugar cane, propagules and hedge leaves outside the trees, so the whole marsh matches the grass color.",
+                  "text": "Also recolors moss, cave vines, azalea bushes, dripleaf, seagrass, kelp, sugar cane, propagules, olive ground blocks and hedge leaves outside the trees, so the whole marsh matches the grass color.",
                   "color": "gray",
                   "italic": true
                 }
@@ -859,6 +859,122 @@
               "color": "gray",
               "bold": true
             }
+          },
+          {
+            "type": "dropdown",
+            "id": "path_color",
+            "title": "Path Color",
+            "description": {
+              "text": "",
+              "extra": [
+                {
+                  "text": "Recolors the dirt paths that run across Moonglade Marsh.",
+                  "color": "gray",
+                  "italic": true
+                }
+              ]
+            },
+            "options": [
+              {
+                "value": "default",
+                "text": {
+                  "text": "Default",
+                  "color": "gray"
+                },
+                "default": true
+              },
+              {
+                "value": "red",
+                "text": {
+                  "text": "Red",
+                  "color": "red"
+                }
+              },
+              {
+                "value": "orange",
+                "text": {
+                  "text": "Orange",
+                  "color": "gold"
+                }
+              },
+              {
+                "value": "yellow",
+                "text": {
+                  "text": "Yellow",
+                  "color": "yellow"
+                }
+              },
+              {
+                "value": "lime",
+                "text": {
+                  "text": "Lime",
+                  "color": "green"
+                }
+              },
+              {
+                "value": "green",
+                "text": {
+                  "text": "Green",
+                  "color": "dark_green"
+                }
+              },
+              {
+                "value": "teal",
+                "text": {
+                  "text": "Swamp Teal",
+                  "color": "dark_aqua"
+                }
+              },
+              {
+                "value": "light_blue",
+                "text": {
+                  "text": "Light Blue",
+                  "color": "aqua"
+                }
+              },
+              {
+                "value": "blue",
+                "text": {
+                  "text": "Blue",
+                  "color": "blue"
+                }
+              },
+              {
+                "value": "pink",
+                "text": {
+                  "text": "Pink",
+                  "color": "light_purple"
+                }
+              },
+              {
+                "value": "purple",
+                "text": {
+                  "text": "Purple",
+                  "color": "dark_purple"
+                }
+              },
+              {
+                "value": "white",
+                "text": {
+                  "text": "White",
+                  "color": "white"
+                }
+              },
+              {
+                "value": "grey",
+                "text": {
+                  "text": "Grey",
+                  "color": "gray"
+                }
+              },
+              {
+                "value": "black",
+                "text": {
+                  "text": "Black",
+                  "color": "dark_gray"
+                }
+              }
+            ]
           },
           {
             "type": "dropdown",
@@ -2281,6 +2397,123 @@
               "id": "vegetation_follows_grass"
             }
           ]
+        }
+      },
+      {
+        "directory": "path_color_red",
+        "condition": {
+          "condition": "catharsis:config",
+          "pack": "moonglade_marsh",
+          "id": "path_color",
+          "value": "red"
+        }
+      },
+      {
+        "directory": "path_color_orange",
+        "condition": {
+          "condition": "catharsis:config",
+          "pack": "moonglade_marsh",
+          "id": "path_color",
+          "value": "orange"
+        }
+      },
+      {
+        "directory": "path_color_yellow",
+        "condition": {
+          "condition": "catharsis:config",
+          "pack": "moonglade_marsh",
+          "id": "path_color",
+          "value": "yellow"
+        }
+      },
+      {
+        "directory": "path_color_lime",
+        "condition": {
+          "condition": "catharsis:config",
+          "pack": "moonglade_marsh",
+          "id": "path_color",
+          "value": "lime"
+        }
+      },
+      {
+        "directory": "path_color_green",
+        "condition": {
+          "condition": "catharsis:config",
+          "pack": "moonglade_marsh",
+          "id": "path_color",
+          "value": "green"
+        }
+      },
+      {
+        "directory": "path_color_teal",
+        "condition": {
+          "condition": "catharsis:config",
+          "pack": "moonglade_marsh",
+          "id": "path_color",
+          "value": "teal"
+        }
+      },
+      {
+        "directory": "path_color_light_blue",
+        "condition": {
+          "condition": "catharsis:config",
+          "pack": "moonglade_marsh",
+          "id": "path_color",
+          "value": "light_blue"
+        }
+      },
+      {
+        "directory": "path_color_blue",
+        "condition": {
+          "condition": "catharsis:config",
+          "pack": "moonglade_marsh",
+          "id": "path_color",
+          "value": "blue"
+        }
+      },
+      {
+        "directory": "path_color_pink",
+        "condition": {
+          "condition": "catharsis:config",
+          "pack": "moonglade_marsh",
+          "id": "path_color",
+          "value": "pink"
+        }
+      },
+      {
+        "directory": "path_color_purple",
+        "condition": {
+          "condition": "catharsis:config",
+          "pack": "moonglade_marsh",
+          "id": "path_color",
+          "value": "purple"
+        }
+      },
+      {
+        "directory": "path_color_white",
+        "condition": {
+          "condition": "catharsis:config",
+          "pack": "moonglade_marsh",
+          "id": "path_color",
+          "value": "white"
+        }
+      },
+      {
+        "directory": "path_color_grey",
+        "condition": {
+          "condition": "catharsis:config",
+          "pack": "moonglade_marsh",
+          "id": "path_color",
+          "value": "grey"
+        }
+      },
+      {
+        "directory": "path_color_black",
+        "condition": {
+          "condition": "catharsis:config",
+          "pack": "moonglade_marsh",
+          "id": "path_color",
+          "value": "black"
         }
       },
       {

@@ -100,7 +100,9 @@ LILY = ["lily_pad"]
 VEGETATION = ["moss_block", "moss_carpet", "cave_vines", "cave_vines_plant", "azalea", "flowering_azalea",
               "big_dripleaf", "big_dripleaf_stem", "small_dripleaf", "seagrass", "tall_seagrass", "kelp",
               "kelp_plant", "sugar_cane", "mangrove_propagule", "sea_pickle", "sweet_berry_bush", "bush",
-              "firefly_bush"]
+              "firefly_bush",
+              "green_terracotta"]  # olive ground/path borders on the island
+PATH = ["dirt_path"]  # the yellow walkways; recoloured by "Path Color"
 # Bush / hedge leaves outside the tree areas also follow the grass colour.
 OTHER_LEAVES = [l for l in LEAVES if l not in FIG_LEAF_TYPES | MANG_LEAF_TYPES]
 # Catharsis tries replacement files in namespace order (vanilla resource stacks are a TreeMap),
@@ -481,6 +483,15 @@ def build():
         overlays.append({"directory": d,
                          "condition": c_and(cfg("grass_color", color), cfg("vegetation_follows_grass"))})
 
+    # ---- path colour
+    for color, _, _, rgb in COLORS:
+        d = f"path_color_{color}"
+        for b in PATH:
+            vs = tinted_virtual_state(b, color, rgb, tint_all=True)
+            wjson(f"{d}/assets/{NS_GROUND}/catharsis/block_replacements/minecraft/{b}.json",
+                  on_island(redirect(vs)))
+        overlays.append({"directory": d, "condition": cfg("path_color", color)})
+
     # ---- water colour (biome effect)
     wjson(f"assets/{NS}/catharsis/areas/{AREA_ISLAND.split(':', 1)[1]}.json",
           {"type": "on_island", "islands": [ISLAND]})
@@ -560,7 +571,8 @@ def build():
                        "Recolors grass blocks, grass, ferns, vines and lily pads across Moonglade Marsh."),
         {"type": "boolean", "id": "vegetation_follows_grass", "title": "Vegetation Follows Grass Color",
          "description": desc("Also recolors moss, cave vines, azalea bushes, dripleaf, seagrass, kelp, "
-                             "sugar cane, propagules and hedge leaves outside the trees, so the whole "
+                             "sugar cane, propagules, olive ground blocks and hedge leaves outside the "
+                             "trees, so the whole "
                              "marsh matches the grass color."),
          "default": True},
         color_dropdown("water_color", "Water Color", "Recolors water on Moonglade Marsh."),
@@ -582,6 +594,7 @@ def build():
          "options": [dict({"value": v, "text": text(l, c)}, **({"default": True} if i == 0 else {}))
                      for i, (v, l, c, _) in enumerate(TIME_SCOPES)]},
         {"type": "separator", "title": text("Ground", "gray", True)},
+        color_dropdown("path_color", "Path Color", "Recolors the dirt paths that run across Moonglade Marsh."),
         {"type": "dropdown", "id": "mud_type", "title": "Mud Texture",
          "description": desc("Replaces mud blocks on the island."),
          "options": [dict({"value": v, "text": text(l, c)}, **({"default": True} if block is None else {}))

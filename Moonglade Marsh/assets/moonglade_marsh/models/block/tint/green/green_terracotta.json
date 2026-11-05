@@ -1,0 +1,52 @@
+{
+  "textures": {
+    "particle": "moonglade_marsh:block/tint/green/green_terracotta",
+    "down": "moonglade_marsh:block/tint/green/green_terracotta",
+    "up": "moonglade_marsh:block/tint/green/green_terracotta",
+    "north": "moonglade_marsh:block/tint/green/green_terracotta",
+    "east": "moonglade_marsh:block/tint/green/green_terracotta",
+    "south": "moonglade_marsh:block/tint/green/green_terracotta",
+    "west": "moonglade_marsh:block/tint/green/green_terracotta",
+    "all": "moonglade_marsh:block/tint/green/green_terracotta"
+  },
+  "elements": [
+    {
+      "from": [
+        0,
+        0,
+        0
+      ],
+      "to": [
+        16,
+        16,
+        16
+      ],
+      "faces": {
+        "down": {
+          "texture": "#down",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "#up",
+          "cullface": "up"
+        },
+        "north": {
+          "texture": "#north",
+          "cullface": "north"
+        },
+        "south": {
+          "texture": "#south",
+          "cullface": "south"
+        },
+        "west": {
+          "texture": "#west",
+          "cullface": "west"
+        },
+        "east": {
+          "texture": "#east",
+          "cullface": "east"
+        }
+      }
+    }
+  ]
+}
