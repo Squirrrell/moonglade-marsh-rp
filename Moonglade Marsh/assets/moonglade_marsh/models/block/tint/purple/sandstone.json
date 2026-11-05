@@ -1,0 +1,54 @@
+{
+  "textures": {
+    "particle": "moonglade_marsh:block/tint/purple/sandstone",
+    "down": "moonglade_marsh:block/tint/purple/sandstone_bottom",
+    "up": "moonglade_marsh:block/tint/purple/sandstone_top",
+    "north": "moonglade_marsh:block/tint/purple/sandstone",
+    "east": "moonglade_marsh:block/tint/purple/sandstone",
+    "south": "moonglade_marsh:block/tint/purple/sandstone",
+    "west": "moonglade_marsh:block/tint/purple/sandstone",
+    "bottom": "moonglade_marsh:block/tint/purple/sandstone_bottom",
+    "side": "moonglade_marsh:block/tint/purple/sandstone",
+    "top": "moonglade_marsh:block/tint/purple/sandstone_top"
+  },
+  "elements": [
+    {
+      "from": [
+        0,
+        0,
+        0
+      ],
+      "to": [
+        16,
+        16,
+        16
+      ],
+      "faces": {
+        "down": {
+          "texture": "#down",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "#up",
+          "cullface": "up"
+        },
+        "north": {
+          "texture": "#north",
+          "cullface": "north"
+        },
+        "south": {
+          "texture": "#south",
+          "cullface": "south"
+        },
+        "west": {
+          "texture": "#west",
+          "cullface": "west"
+        },
+        "east": {
+          "texture": "#east",
+          "cullface": "east"
+        }
+      }
+    }
+  ]
+}

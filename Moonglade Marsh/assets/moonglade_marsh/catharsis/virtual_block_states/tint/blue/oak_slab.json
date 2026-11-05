@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "moonglade_marsh:block/tint/blue/oak_slab"
+    },
+    "type=double": {
+      "model": "moonglade_marsh:block/tint/blue/oak_planks"
+    },
+    "type=top": {
+      "model": "moonglade_marsh:block/tint/blue/oak_slab_top"
+    }
+  }
+}

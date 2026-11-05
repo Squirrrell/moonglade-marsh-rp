@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "moonglade_marsh:block/tint/teal/cut_sandstone_slab"
+    },
+    "type=double": {
+      "model": "moonglade_marsh:block/tint/teal/cut_sandstone"
+    },
+    "type=top": {
+      "model": "moonglade_marsh:block/tint/teal/cut_sandstone_slab_top"
+    }
+  }
+}

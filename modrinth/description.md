@@ -9,7 +9,7 @@ A configurable recolour pack for **Moonglade Marsh** (Galatea) in Hypixel SkyBlo
 - **Mangrove trees:** choose from 11 wood types and 14 leaf colours.
 - **Grass colour:** grass blocks, short and tall grass, ferns, vines and lily pads. Optionally, all other greenery (moss, cave vines, bushes, seagrass, kelp, sugar cane and more) follows it too.
 - **Water colour:** recolour the marsh water.
-- **Path colour:** recolour the dirt paths.
+- **Path colour:** recolour the dirt paths, the starting-area sand, the sandstone steps and the oak slab walkways.
 - **Hide clutter:** hide grass and ferns, or hide lily pads.
 - **Time of day:** lock the sky to sunrise, day, sunset or night, on Moonglade Marsh or across all of SkyBlock. This only changes what your client draws.
 - **Mud texture:** packed mud, mud bricks, dirt, coarse dirt, moss or rooted dirt.

@@ -466,7 +466,7 @@
           {
             "type": "separator",
             "title": {
-              "text": "Grass Color",
+              "text": "Grass & Paths",
               "color": "dark_green",
               "bold": true
             }
@@ -480,6 +480,122 @@
               "extra": [
                 {
                   "text": "Recolors grass blocks, grass, ferns, vines and lily pads across Moonglade Marsh.",
+                  "color": "gray",
+                  "italic": true
+                }
+              ]
+            },
+            "options": [
+              {
+                "value": "default",
+                "text": {
+                  "text": "Default",
+                  "color": "gray"
+                },
+                "default": true
+              },
+              {
+                "value": "red",
+                "text": {
+                  "text": "Red",
+                  "color": "red"
+                }
+              },
+              {
+                "value": "orange",
+                "text": {
+                  "text": "Orange",
+                  "color": "gold"
+                }
+              },
+              {
+                "value": "yellow",
+                "text": {
+                  "text": "Yellow",
+                  "color": "yellow"
+                }
+              },
+              {
+                "value": "lime",
+                "text": {
+                  "text": "Lime",
+                  "color": "green"
+                }
+              },
+              {
+                "value": "green",
+                "text": {
+                  "text": "Green",
+                  "color": "dark_green"
+                }
+              },
+              {
+                "value": "teal",
+                "text": {
+                  "text": "Swamp Teal",
+                  "color": "dark_aqua"
+                }
+              },
+              {
+                "value": "light_blue",
+                "text": {
+                  "text": "Light Blue",
+                  "color": "aqua"
+                }
+              },
+              {
+                "value": "blue",
+                "text": {
+                  "text": "Blue",
+                  "color": "blue"
+                }
+              },
+              {
+                "value": "pink",
+                "text": {
+                  "text": "Pink",
+                  "color": "light_purple"
+                }
+              },
+              {
+                "value": "purple",
+                "text": {
+                  "text": "Purple",
+                  "color": "dark_purple"
+                }
+              },
+              {
+                "value": "white",
+                "text": {
+                  "text": "White",
+                  "color": "white"
+                }
+              },
+              {
+                "value": "grey",
+                "text": {
+                  "text": "Grey",
+                  "color": "gray"
+                }
+              },
+              {
+                "value": "black",
+                "text": {
+                  "text": "Black",
+                  "color": "dark_gray"
+                }
+              }
+            ]
+          },
+          {
+            "type": "dropdown",
+            "id": "path_color",
+            "title": "Path Color",
+            "description": {
+              "text": "",
+              "extra": [
+                {
+                  "text": "Recolors the dirt paths, the sand of the starting area, the sandstone steps and the oak slab walkways.",
                   "color": "gray",
                   "italic": true
                 }
@@ -859,122 +975,6 @@
               "color": "gray",
               "bold": true
             }
-          },
-          {
-            "type": "dropdown",
-            "id": "path_color",
-            "title": "Path Color",
-            "description": {
-              "text": "",
-              "extra": [
-                {
-                  "text": "Recolors the dirt paths that run across Moonglade Marsh.",
-                  "color": "gray",
-                  "italic": true
-                }
-              ]
-            },
-            "options": [
-              {
-                "value": "default",
-                "text": {
-                  "text": "Default",
-                  "color": "gray"
-                },
-                "default": true
-              },
-              {
-                "value": "red",
-                "text": {
-                  "text": "Red",
-                  "color": "red"
-                }
-              },
-              {
-                "value": "orange",
-                "text": {
-                  "text": "Orange",
-                  "color": "gold"
-                }
-              },
-              {
-                "value": "yellow",
-                "text": {
-                  "text": "Yellow",
-                  "color": "yellow"
-                }
-              },
-              {
-                "value": "lime",
-                "text": {
-                  "text": "Lime",
-                  "color": "green"
-                }
-              },
-              {
-                "value": "green",
-                "text": {
-                  "text": "Green",
-                  "color": "dark_green"
-                }
-              },
-              {
-                "value": "teal",
-                "text": {
-                  "text": "Swamp Teal",
-                  "color": "dark_aqua"
-                }
-              },
-              {
-                "value": "light_blue",
-                "text": {
-                  "text": "Light Blue",
-                  "color": "aqua"
-                }
-              },
-              {
-                "value": "blue",
-                "text": {
-                  "text": "Blue",
-                  "color": "blue"
-                }
-              },
-              {
-                "value": "pink",
-                "text": {
-                  "text": "Pink",
-                  "color": "light_purple"
-                }
-              },
-              {
-                "value": "purple",
-                "text": {
-                  "text": "Purple",
-                  "color": "dark_purple"
-                }
-              },
-              {
-                "value": "white",
-                "text": {
-                  "text": "White",
-                  "color": "white"
-                }
-              },
-              {
-                "value": "grey",
-                "text": {
-                  "text": "Grey",
-                  "color": "gray"
-                }
-              },
-              {
-                "value": "black",
-                "text": {
-                  "text": "Black",
-                  "color": "dark_gray"
-                }
-              }
-            ]
           },
           {
             "type": "dropdown",

@@ -102,7 +102,11 @@ VEGETATION = ["moss_block", "moss_carpet", "cave_vines", "cave_vines_plant", "az
               "kelp_plant", "sugar_cane", "mangrove_propagule", "sea_pickle", "sweet_berry_bush", "bush",
               "firefly_bush",
               "green_terracotta"]  # olive ground/path borders on the island
-PATH = ["dirt_path"]  # the yellow walkways; recoloured by "Path Color"
+# Recoloured by "Path Color": dirt walkways, the starting-area sand, the sandstone steps in it
+# and the oak slab strips along the paths. Full sandstone blocks are left alone because the
+# buildings use them for walls.
+PATH = ["dirt_path", "sand", "oak_slab", "sandstone_slab", "sandstone_stairs",
+        "smooth_sandstone_slab", "smooth_sandstone_stairs", "cut_sandstone_slab"]
 # Bush / hedge leaves outside the tree areas also follow the grass colour.
 OTHER_LEAVES = [l for l in LEAVES if l not in FIG_LEAF_TYPES | MANG_LEAF_TYPES]
 # Catharsis tries replacement files in namespace order (vanilla resource stacks are a TreeMap),
@@ -566,14 +570,16 @@ def build():
         {"type": "separator", "title": text("Mangrove Trees", "dark_red", True)},
         wood_dropdown("mangrove_wood_type", "mangrove"),
         color_dropdown("mangrove_leaf_color", "Leaf Color", "Recolors the canopy of every mangrove tree."),
-        {"type": "separator", "title": text("Grass Color", "dark_green", True)},
+        {"type": "separator", "title": text("Grass & Paths", "dark_green", True)},
         color_dropdown("grass_color", "Grass Color",
                        "Recolors grass blocks, grass, ferns, vines and lily pads across Moonglade Marsh."),
+        color_dropdown("path_color", "Path Color",
+                       "Recolors the dirt paths, the sand of the starting area, the sandstone steps "
+                       "and the oak slab walkways."),
         {"type": "boolean", "id": "vegetation_follows_grass", "title": "Vegetation Follows Grass Color",
          "description": desc("Also recolors moss, cave vines, azalea bushes, dripleaf, seagrass, kelp, "
                              "sugar cane, propagules, olive ground blocks and hedge leaves outside the "
-                             "trees, so the whole "
-                             "marsh matches the grass color."),
+                             "trees, so the whole marsh matches the grass color."),
          "default": True},
         color_dropdown("water_color", "Water Color", "Recolors water on Moonglade Marsh."),
         {"type": "separator", "title": text("Marsh Clutter", "dark_aqua", True)},
@@ -594,7 +600,6 @@ def build():
          "options": [dict({"value": v, "text": text(l, c)}, **({"default": True} if i == 0 else {}))
                      for i, (v, l, c, _) in enumerate(TIME_SCOPES)]},
         {"type": "separator", "title": text("Ground", "gray", True)},
-        color_dropdown("path_color", "Path Color", "Recolors the dirt paths that run across Moonglade Marsh."),
         {"type": "dropdown", "id": "mud_type", "title": "Mud Texture",
          "description": desc("Replaces mud blocks on the island."),
          "options": [dict({"value": v, "text": text(l, c)}, **({"default": True} if block is None else {}))

@@ -1,0 +1,52 @@
+{
+  "textures": {
+    "particle": "moonglade_marsh:block/tint/yellow/sand",
+    "down": "moonglade_marsh:block/tint/yellow/sand",
+    "up": "moonglade_marsh:block/tint/yellow/sand",
+    "north": "moonglade_marsh:block/tint/yellow/sand",
+    "east": "moonglade_marsh:block/tint/yellow/sand",
+    "south": "moonglade_marsh:block/tint/yellow/sand",
+    "west": "moonglade_marsh:block/tint/yellow/sand",
+    "all": "moonglade_marsh:block/tint/yellow/sand"
+  },
+  "elements": [
+    {
+      "from": [
+        0,
+        0,
+        0
+      ],
+      "to": [
+        16,
+        16,
+        16
+      ],
+      "faces": {
+        "down": {
+          "texture": "#down",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "#up",
+          "cullface": "up"
+        },
+        "north": {
+          "texture": "#north",
+          "cullface": "north"
+        },
+        "south": {
+          "texture": "#south",
+          "cullface": "south"
+        },
+        "west": {
+          "texture": "#west",
+          "cullface": "west"
+        },
+        "east": {
+          "texture": "#east",
+          "cullface": "east"
+        }
+      }
+    }
+  ]
+}
